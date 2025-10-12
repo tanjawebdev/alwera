@@ -1,0 +1,26 @@
+footer {
+    background-color: $secondary;
+    display: flex;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+    }
+}
+
+#menu-footer {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+
+    li {
+        a:hover {
+            color: $primary;
+            transition: color 0.3s ease-in-out;
+        }
+    }
+}

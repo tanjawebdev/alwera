@@ -1,0 +1,43 @@
+name: Deploy Theme
+
+on:
+  push:
+    branches: [ "staging", "master" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build Theme
+        run: |
+          npm install
+          npm run build
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Rsync Theme to Server
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_STAGING: ${{ secrets.REMOTE_PATH_STAGING }}
+          REMOTE_PROD: ${{ secrets.REMOTE_PATH_PROD }}
+          THEME_SLUG: projecttheme
+        run: |
+          TARGET="${{ github.ref == 'refs/heads/main' && env.REMOTE_PROD || env.REMOTE_STAGING }}"
+          rsync -az --delete \
+            --exclude ".DS_Store" \
+            ./ \
+            "$SSH_USER@$SSH_HOST:$TARGET/wp-content/themes/$THEME_SLUG/"
