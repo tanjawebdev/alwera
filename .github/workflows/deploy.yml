@@ -2,7 +2,7 @@ name: Deploy Theme
 
 on:
   push:
-    branches: [ "staging", "master" ]
+    branches: [ "staging", "main" ]
 
 jobs:
   build-and-deploy:
@@ -24,20 +24,36 @@ jobs:
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/github_deploy_ed25519
+          chmod 600 ~/.ssh/github_deploy_ed25519
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
       - name: Rsync Theme to Server
         env:
-          SSH_USER: ${{ secrets.SSH_USER }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_STAGING: ${{ secrets.REMOTE_PATH_STAGING }}
           REMOTE_PROD: ${{ secrets.REMOTE_PATH_PROD }}
           THEME_SLUG: projecttheme
         run: |
-          TARGET="${{ github.ref == 'refs/heads/main' && env.REMOTE_PROD || env.REMOTE_STAGING }}"
+          # Nur explizit zuordnen
+          if [ "${GITHUB_REF_NAME}" = "staging" ]; then
+            TARGET="${REMOTE_STAGING}"
+            USER="${{ secrets.SSH_USER_STAGING }}"
+          elif [ "${GITHUB_REF_NAME}" = "main" ]; then
+            TARGET="${REMOTE_PROD}"
+            USER="${{ secrets.SSH_USER_PROD }}"
+          else
+            echo "Branch ${GITHUB_REF_NAME} wird nicht deployed."
+            exit 0
+          fi
+
           rsync -az --delete \
+            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes" \
+            --exclude ".git" \
+            --exclude ".github" \
+            --exclude "node_modules" \
+            --exclude "src" \
+            --exclude ".env" \
             --exclude ".DS_Store" \
             ./ \
             "$SSH_USER@$SSH_HOST:$TARGET/wp-content/themes/$THEME_SLUG/"
