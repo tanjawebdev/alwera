@@ -48,7 +48,7 @@ jobs:
           fi
 
           rsync -az --delete \
-            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes" \
+            -e "ssh -i ~/.ssh/github_deploy_ed25519 -o StrictHostKeyChecking=yes" \
             --exclude ".git" \
             --exclude ".github" \
             --exclude "node_modules" \
