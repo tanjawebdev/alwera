@@ -56,4 +56,4 @@ jobs:
             --exclude ".env" \
             --exclude ".DS_Store" \
             ./ \
-            "$SSH_USER@$SSH_HOST:$TARGET/wp-content/themes/$THEME_SLUG/"
+            "$USER@$SSH_HOST:$TARGET/wp-content/themes/$THEME_SLUG/"
