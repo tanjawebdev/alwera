@@ -12,13 +12,28 @@
  * @see https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
  */
 $font-size-root:62.5%; // 1rem = 10px
-$font-size-base:1.4rem;
-$line-height-base: 1.5;
+$font-size-base:1.6rem;
+$line-height-base: 1.2;
 $font-weight-base:400;
-$font-family-sans-serif: 'Ubuntu', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'aptos', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $btn-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
 $border-radius:.4rem;
-$primary:blue;
+
+$primary:#17500C;
+$secondary:#B2CDA6;
+$dark-red:#4F1E27;
+
+// fonts
+$h1-font-size: 4.8rem;
+$h2-font-size: 3.2rem;
+$h3-font-size: 2.4rem;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+// button
+$input-btn-font-size: 1.4rem;
+
 $btn-box-shadow:none;
 $btn-active-box-shadow:none;
 $btn-focus-box-shadow:none;
@@ -26,8 +41,8 @@ $input-btn-focus-box-shadow:none;
 $input-border-radius:0;
 $grid-columns:12;
 $grid-gutter-width:3rem;
-$body-color:black;
-$body-bg: rgb(241, 241, 241);
+$body-color: $dark-red;
+$body-bg: #ffffff;
 
 $grid-breakpoints: (
     xs: 0,

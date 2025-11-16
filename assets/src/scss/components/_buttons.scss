@@ -1,0 +1,49 @@
+.btn {
+    padding: 1.2rem 1.6rem;
+    transition: 0.3s ease-out all;
+}
+
+.btn-primary {
+    background: none;
+    border: 1px solid $primary;
+    color: $primary;
+
+    &:hover {
+        background: $primary;
+        color: white;
+    }
+
+    &:active {
+        background: $primary;
+        color: white;
+        border-color: $secondary !important;
+    }
+}
+
+.btn-secondary {
+    background: none;
+    color: $primary;
+    border: none;
+
+    &:hover {
+        background: none;
+        color: $primary;
+    }
+
+    &:active {
+        color: $dark-red;
+    }
+}
+
+.btn-tertiary {
+    background: none;
+    color: $primary;
+    border: none;
+
+    &:hover {
+        background: none;
+        color: $primary;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+    }
+}
