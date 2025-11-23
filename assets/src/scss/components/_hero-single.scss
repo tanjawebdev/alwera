@@ -1,0 +1,28 @@
+.hero-single {
+    position: relative;
+    display: flex;
+    align-items: end;
+}
+
+.hero-single-content {
+    z-index: 1;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-picture, .hero-picture img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+.hero-single.hero-single-half-height {
+    height: 50vh;
+}
+
+.hero-single.hero-single-full-height {
+    height: 100vh;
+}

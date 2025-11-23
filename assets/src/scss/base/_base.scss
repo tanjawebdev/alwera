@@ -21,3 +21,21 @@ a:active {
 .transition, %transition {
     transition:all 0.3s ease-in-out;
 }
+
+main > section {
+    margin-bottom: 8rem;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 12rem;
+    }
+}
+
+p.subtitle {
+    margin: 0;
+}
+
+.typo-white {
+    h1, h2, h3, h4, h5, p {
+        color: #FFFFFF;
+    }
+}

@@ -1,4 +1,5 @@
 import General from './_general';
+import HeroGallery from './_hero-gallery';
 
 const App = {
 	/**
@@ -10,6 +11,12 @@ const App = {
 			return new General();
 		}
 		initGeneral();
+
+		// Hero Gallery (Splide carousel)
+		function initHeroGallery() {
+			return new HeroGallery();
+		}
+		initHeroGallery();
 	},
 };
 

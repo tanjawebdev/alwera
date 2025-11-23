@@ -12,7 +12,7 @@ get_header(); ?>
       get_template_part('templates/render', 'page-modules');
     } else {
       // Fallback: klassischer Editor-Inhalt
-      echo '<section class="section py-5"><div class="container-lg">';
+      echo '<section class="section"><div class="container-lg">';
         the_title('<h1 class="mb-4">','</h1>');
         the_content();
       echo '</div></section>';

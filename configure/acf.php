@@ -8,7 +8,6 @@ function section_open(array $opts = []) {
     $id        = $opts['id'] ?? '';
     $bg        = $opts['bg'] ?? 'none';
     $container = $opts['container'] ?? 'container-lg';
-    $py        = $opts['padding_y'] ?? 'py-5';
     $show      = $opts['show_on'] ?? 'everywhere'; // everywhere | only-mobile | only-desktop
 
     // Sichtbarkeits-Klassen mappen (Bootstrap)
@@ -16,7 +15,7 @@ function section_open(array $opts = []) {
     if ($show === 'only-mobile')  $visClass = 'd-lg-none';
     if ($show === 'only-desktop') $visClass = 'd-none d-lg-block';
 
-    $classesSection = trim("section section--bg-{$bg} {$py} {$visClass}");
+    $classesSection = trim("section section--bg-{$bg} {$visClass}");
     echo '<section'.($id ? ' id="'.esc_attr($id).'"' : '').' class="'.$name.' '.esc_attr($classesSection).'">';
     
     if ($container !== 'none') {
