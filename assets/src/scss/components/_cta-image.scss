@@ -1,6 +1,7 @@
 .cta-image-wrapper {
   position: relative;
-  display: inline-block; /* or block, depending on layout */
+  display: flex;
+  align-items: center;
   width: 100%;
   overflow: hidden;
 }
@@ -29,11 +30,18 @@
     z-index: 2;
 }
 
+.cta-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 .cta-image img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .size-large {
