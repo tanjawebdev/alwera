@@ -20,6 +20,61 @@
     }
 }
 
+.btn-hero {
+    background: white;
+    color: $primary;
+    position: relative;
+    width: 15rem;
+    overflow: hidden;
+    text-align: left;
+
+    span {
+        left: 0;
+        transition: 0.3s ease;
+        position: relative;
+    }
+
+    &:hover {
+        background: white;
+        color: $primary;
+
+        span {
+            left: 2rem;
+        }
+    }
+
+    &:active {
+        border-color: $secondary !important;
+    }
+
+    &::after, &::before {
+        content: '';
+        width: 1.5rem;
+        height: 1rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1rem;
+        background-color: $primary;
+        -webkit-mask: url('@/icons/arrow.svg') no-repeat center / contain;
+        mask: url('@/icons/arrow.svg') no-repeat center / contain;
+        transition: all 0.3s ease-out;
+    }
+
+    &::before {
+        right: auto;
+        left: -2rem;
+    }
+
+    &:hover::after {
+        right: -2rem;
+    }
+
+    &:hover::before {
+        left: 1rem;
+    }
+}
+
 .btn-secondary {
     background: none;
     color: $primary;

@@ -27,7 +27,9 @@ $items = get_sub_field('items');
                 </div>
 
                 <?php if ($item['buttontext'] && $item['buttonlink']): ?>
-                  <a href="<?php echo esc_url($item['buttonlink']); ?>" class="btn btn-primary"><?php echo esc_html($item['buttontext']); ?></a>
+                  <a href="<?php echo esc_url($item['buttonlink']); ?>" class="btn btn-hero">
+                    <span><?php echo esc_html($item['buttontext']); ?></span>
+                  </a>
                 <?php endif; ?>
                 
               </div>

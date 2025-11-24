@@ -4,7 +4,7 @@
   <footer id="colophon" class="site-footer">
     <div class="footer-content container-lg">
       <div class="footer-logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/src/images/logo.svg" alt="Logo">
+        <img src="<?php echo get_template_directory_uri(); ?>/static/img/logo.svg" alt="Logo">
       </div>
       <?php wp_nav_menu( array( 'theme_location' => 'menu-footer', 'menu_id' => 'menu-footer' ) ); ?>
       <div class="footer-text">

@@ -11,9 +11,15 @@
 .hero-gallery-content {
     z-index: 1;
     display: flex;
-    align-items: flex-end;
     width: 100%;
     justify-content: space-between;
     padding: 0 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+        align-items: flex-end;
+        flex-direction: row;
+        margin-bottom: 2rem;
+    }
 }
