@@ -630,6 +630,59 @@
                             "save_options": 0,
                             "allow_custom": 0,
                             "search_placeholder": ""
+                        },
+                        {
+                            "key": "field_6924dddac0483",
+                            "label": "Pagelink",
+                            "name": "pagelink",
+                            "aria-label": "",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": "",
+                            "allow_archives": 0,
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_6924ddebc0484",
+                            "label": "Icon",
+                            "name": "icon",
+                            "aria-label": "",
+                            "type": "icon_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": [
+                                "dashicons",
+                                "media_library",
+                                "url"
+                            ],
+                            "return_format": "string",
+                            "allow_in_bindings": 0,
+                            "library": "all",
+                            "default_value": {
+                                "type": null,
+                                "value": null
+                            }
                         }
                     ],
                     "min": "",
@@ -1198,9 +1251,10 @@
                             "choices": {
                                 "container-small": "container-small",
                                 "container-lg": "container-lg",
-                                "container-fluid": "container-fluid"
+                                "container-fluid": "container-fluid",
+                                "container-full": "container-full"
                             },
-                            "default_value": "container-fluid",
+                            "default_value": "container-full",
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
@@ -2504,5 +2558,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1763922389
+    "modified": 1764023801
 }
