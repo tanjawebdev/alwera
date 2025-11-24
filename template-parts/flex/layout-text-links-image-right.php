@@ -5,14 +5,16 @@ $text = get_sub_field('text');
 $buttontext = get_sub_field('buttontext');
 $image = get_sub_field('image');
 ?>
+
+<div class="px-3 px-lg-0">
 <div class="row align-items-center g-5">
-  <div class="col-md-6">
-    <?php if ($title): ?>
-      <h2><?php echo esc_html($title); ?></h2>
-    <?php endif; ?>
-    
+  <div class="col-md-6 order-2 order-md-1">
     <?php if ($subtitle): ?>
       <p class="subtitle"><?php echo esc_html($subtitle); ?></p>
+    <?php endif; ?>
+
+    <?php if ($title): ?>
+      <h2><?php echo esc_html($title); ?></h2>
     <?php endif; ?>
     
     <?php if ($text): ?>
@@ -24,10 +26,12 @@ $image = get_sub_field('image');
     <?php endif; ?>
   </div>
   
-  <div class="col-md-6">
+  <div class="col-md-6 order-1 order-md-2">
     <?php if ($image): ?>
       <?php echo wp_get_attachment_image($image['ID'], 'large', false, ['class' => 'img-fluid rounded']); ?>
     <?php endif; ?>
   </div>
+
+</div>
 </div>
 
