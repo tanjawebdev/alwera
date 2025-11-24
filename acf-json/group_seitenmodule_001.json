@@ -1032,9 +1032,10 @@
                             "choices": {
                                 "container-small": "container-small",
                                 "container-lg": "container-lg",
-                                "container-fluid": "container-fluid"
+                                "container-fluid": "container-fluid",
+                                "container-full": "container-full"
                             },
-                            "default_value": false,
+                            "default_value": "container-full",
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
@@ -2396,5 +2397,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1764014924
+    "modified": 1764021572
 }

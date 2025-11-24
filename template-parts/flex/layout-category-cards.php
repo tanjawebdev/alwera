@@ -3,8 +3,6 @@ $title = get_sub_field('title');
 $cards = get_sub_field('card');
 ?>
 
-<div class="px-3 px-lg-0">
-
   <?php if ($title): ?>
     <h2><?php echo esc_html($title); ?></h2>
   <?php endif; ?>
@@ -47,5 +45,3 @@ $cards = get_sub_field('card');
 
     </div>
   <?php endif; ?>
-
-</div>

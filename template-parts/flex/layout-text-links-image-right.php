@@ -6,7 +6,6 @@ $buttontext = get_sub_field('buttontext');
 $image = get_sub_field('image');
 ?>
 
-<div class="px-3 px-lg-0">
 <div class="row align-items-center g-5">
   <div class="col-md-6 order-2 order-md-1">
     <?php if ($subtitle): ?>
@@ -33,5 +32,5 @@ $image = get_sub_field('image');
   </div>
 
 </div>
-</div>
+
 

@@ -7,7 +7,7 @@ $image = get_sub_field('image');
 $size = get_sub_field('size');
 ?>
 
-<div class="px-md-3">
+
 <div class="cta-image-wrapper size-<?php echo esc_attr($size); ?> rounded">
   <?php if ($image): ?>
     <div class="cta-image">
@@ -34,5 +34,5 @@ $size = get_sub_field('size');
       <?php endif; ?>
   </div>
 </div>
-      </div>
+
 
