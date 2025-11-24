@@ -57,6 +57,15 @@ function vite_client_head_hook() {
 	}
 }
 
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_style(
+        'bootstrap-icons',
+        'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css',
+        [],
+        null
+    );
+});
+
 add_action( 'wp_head', 'vite_client_head_hook' );
 
 function add_module_type_attribute( $tag, $handle, $src ) {
