@@ -548,7 +548,7 @@
                                 "container-lg": "container-lg",
                                 "container-fluid": "container-fluid"
                             },
-                            "default_value": false,
+                            "default_value": "container-lg",
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
@@ -710,7 +710,7 @@
                                 "container-lg": "container-lg",
                                 "container-fluid": "container-fluid"
                             },
-                            "default_value": false,
+                            "default_value": "container-lg",
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
@@ -872,7 +872,7 @@
                                 "container-lg": "container-lg",
                                 "container-fluid": "container-fluid"
                             },
-                            "default_value": false,
+                            "default_value": "container-lg",
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
@@ -1035,6 +1035,37 @@
                                 "container-fluid": "container-fluid"
                             },
                             "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        },
+                        {
+                            "key": "field_6924bb21d6e12",
+                            "label": "Size",
+                            "name": "size",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "large": "large",
+                                "small": "small"
+                            },
+                            "default_value": "large",
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
@@ -2365,5 +2396,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1764001150
+    "modified": 1764014924
 }

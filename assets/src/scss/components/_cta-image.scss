@@ -1,0 +1,34 @@
+.cta-image-wrapper {
+  position: relative;
+  display: inline-block; /* or block, depending on layout */
+}
+
+.cta-image-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.45), transparent);
+  z-index: 1;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    z-index: 2;
+}
+
+.cta-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
