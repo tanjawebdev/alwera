@@ -1,6 +1,8 @@
 .cta-image-wrapper {
   position: relative;
   display: inline-block; /* or block, depending on layout */
+  width: 100%;
+  overflow: hidden;
 }
 
 .cta-image-wrapper::after {
@@ -31,4 +33,13 @@
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
+}
+
+.size-large {
+    height: 1000px;
+}
+
+.size-small {
+    height: 300px;
 }

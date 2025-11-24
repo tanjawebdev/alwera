@@ -4,13 +4,14 @@ $subtitle = get_sub_field('subtitle');
 $text = get_sub_field('text');
 $buttontext = get_sub_field('buttontext');
 $image = get_sub_field('image');
+$size = get_sub_field('size');
 ?>
 
 <div class="px-3">
-<div class="cta-image-wrapper">
+<div class="cta-image-wrapper size-<?php echo esc_attr($size); ?> rounded">
   <?php if ($image): ?>
     <div class="cta-image">
-      <?php echo wp_get_attachment_image($image['ID'], 'large', false, ['class' => 'img-fluid rounded']); ?>
+      <?php echo wp_get_attachment_image($image['ID'], 'large', false, ['class' => 'img-fluid']); ?>
     </div>
   <?php endif; ?>
   
