@@ -37,6 +37,48 @@
           <?php wp_nav_menu( array( 'theme_location' => 'menu-button', 'menu_id' => 'menu-button' ) ); ?>
       </nav><!-- #site-navigation -->
     </div>
+
+    <button class="menu-toggle col-6" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header><!-- #masthead -->
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__inner">
+      <div class="mobile-menu__header">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="mobile-menu__brand">
+          <img src="<?php echo get_template_directory_uri(); ?>/static/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
+        </a>
+        <button class="menu-toggle menu-toggle--close" aria-label="<?php esc_attr_e( 'Menü schließen', 'alwera' ); ?>">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile-menu__nav">
+        <?php
+          wp_nav_menu(
+            array(
+              'theme_location' => 'menu-main',
+              'menu_id'        => 'mobile-menu-main',
+              'menu_class'     => 'mobile-menu__list',
+            )
+          );
+        ?>
+      </nav>
+      <div class="mobile-menu__buttons">
+        <?php
+          wp_nav_menu(
+            array(
+              'theme_location' => 'menu-button',
+              'menu_id'        => 'mobile-menu-button',
+              'menu_class'     => 'mobile-menu__button-list',
+            )
+          );
+        ?>
+      </div>
+    </div>
+  </div>
 
   <div id="content" class="site-content">
