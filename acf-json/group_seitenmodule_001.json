@@ -1251,10 +1251,9 @@
                             "choices": {
                                 "container-small": "container-small",
                                 "container-lg": "container-lg",
-                                "container-fluid": "container-fluid",
-                                "container-full": "container-full"
+                                "container-fluid": "container-fluid"
                             },
-                            "default_value": "container-full",
+                            "default_value": "container-fluid",
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
@@ -1687,7 +1686,7 @@
                         {
                             "key": "field_691ba7e86299b",
                             "label": "Text",
-                            "name": "",
+                            "name": "text",
                             "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
@@ -2558,5 +2557,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1764023801
+    "modified": 1764104130
 }
