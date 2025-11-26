@@ -1,5 +1,6 @@
 import General from './_general';
 import HeroGallery from './_hero-gallery';
+import BlogSlider from './_blog-slider';
 
 const App = {
 	/**
@@ -17,6 +18,12 @@ const App = {
 			return new HeroGallery();
 		}
 		initHeroGallery();
+
+		// Blog Slider (Splide carousel)
+		function initBlogSlider() {
+			return new BlogSlider();
+		}
+		initBlogSlider();
 	},
 };
 

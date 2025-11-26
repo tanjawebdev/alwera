@@ -64,8 +64,8 @@ get_header(); ?>
                 </div>
               <?php endif; ?>
 
-              <a href="<?php the_permalink(); ?>" class="blog-teaser__link">
-                Mehr erfahren →
+              <a href="<?php the_permalink(); ?>" class="blog-teaser__link btn btn-overview">
+                <span>Mehr erfahren</span>
               </a>
             </div>
           </article>
@@ -73,7 +73,14 @@ get_header(); ?>
         <?php endwhile; ?>
       </div>
 
-      <?php the_posts_pagination(); ?>
+      <?php 
+      the_posts_pagination(array(
+        'mid_size'  => 2,
+        'prev_text' => '<span aria-label="' . __('Previous', 'alwera') . '"></span>',
+        'next_text' => '<span aria-label="' . __('Next', 'alwera') . '"></span>',
+        'screen_reader_text' => 'Pagination Blog Posts',
+      )); 
+      ?>
     </div>
   </section>
 <?php endif; ?>

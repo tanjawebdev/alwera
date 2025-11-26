@@ -20,7 +20,9 @@
     }
 }
 
-.btn-hero {
+.btn-hero,
+.btn-secondary,
+.btn-overview {
     background: white;
     color: $primary;
     position: relative;
@@ -47,7 +49,8 @@
         border-color: $secondary !important;
     }
 
-    &::after, &::before {
+    &::after,
+    &::before {
         content: '';
         width: 1.5rem;
         height: 1rem;
@@ -87,6 +90,36 @@
 
     &:active {
         color: $dark-red;
+    }
+}
+
+.btn-overview {
+    background: none;
+    color: $dark-red;
+    border: none;
+    padding-left: 0;
+    width: auto;
+
+    &:hover {
+        background: none;
+        color: $dark-red;
+
+        span {
+            left: 3.5rem;
+        }
+    }
+
+    &:active {
+        color: $primary;
+    }
+
+    &::after,
+    &::before {
+        background-color: $dark-red;
+    }
+
+    span {
+        padding-right: 2rem;
     }
 }
 
