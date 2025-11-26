@@ -66,6 +66,14 @@ add_action('wp_enqueue_scripts', function () {
     );
 });
 
+wp_enqueue_script(
+  'bootstrap-js',
+  'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
+  [],
+  null,
+  true
+);
+
 add_action( 'wp_head', 'vite_client_head_hook' );
 
 function add_module_type_attribute( $tag, $handle, $src ) {

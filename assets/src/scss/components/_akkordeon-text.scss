@@ -1,0 +1,101 @@
+.accordionText-wrapper {
+    display: flex;
+}
+
+.accordionText-wrapper h2 {
+    flex: 2;
+}
+
+.accordionText-wrapper .accordion {
+    flex: 3;
+}
+
+.accordion-body {
+    padding-left: 4rem;
+}
+
+/* Space for our icon */
+.accordion-button {
+  position: relative;
+  padding-left: 4rem;
+}
+
+/* BOX (does NOT rotate) */
+.accordion-button::before {
+  content: "";
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+
+  background-color: #f2f2f2;
+  border-radius: .35rem;
+}
+
+/* ARROW (rotates) */
+.accordion-button::after {
+  content: "";
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  transform: translateY(-50%) rotate(0deg);
+
+  /* Draw arrow using mask so colors can be changed */
+  -webkit-mask-image: url("data:image/svg+xml;utf8,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
+    <path d='M6 9l6 6 6-6' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
+    </svg>");
+  mask-image: url("data:image/svg+xml;utf8,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
+    <path d='M6 9l6 6 6-6' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
+    </svg>");
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 1rem;
+  mask-size: 1rem;
+
+  background-color: #222; /* arrow color */
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+/* Rotate ONLY the arrow when open */
+.accordion-button:not(.collapsed)::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Hover styles */
+.accordion-item:hover .accordion-button::before {
+  background-color: #17500C; /* box */
+}
+
+.accordion-item:hover .accordion-button::after {
+  background-color: #fff;     /* arrow */
+}
+
+/* DONT change background color when accordion item is open */
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+/*REMOVE Bootstrap Borders*/
+.accordion-item,
+.accordion-button,
+.accordion-collapse {
+  border: none;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/*Add my own Borders*/
+.accordion-item {
+  border-bottom: 0.5px solid #4f1e2733; /* choose your color */
+}
