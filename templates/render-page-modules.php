@@ -55,7 +55,7 @@ while (have_rows('page_modules')) : the_row();
     case 'akkordeon_contacts':
       get_template_part('template-parts/flex/layout', 'akkordeon-contacts'); break;
 
-    case 'body_text_middle':
+    case 'body_text':
       get_template_part('template-parts/flex/layout', 'body-text'); break;
 
     case 'info_box_selection':

@@ -1682,15 +1682,15 @@
                 "layout_body_text_middle": {
                     "key": "layout_body_text_middle",
                     "name": "body_text",
-                    "label": "Fließtext",
+                    "label": "Text",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_691ba7e86299b",
+                            "key": "field_6928a9172576f",
                             "label": "Text",
                             "name": "text",
                             "aria-label": "",
-                            "type": "textarea",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1700,17 +1700,16 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "acfe_textarea_code": 0,
-                            "maxlength": "",
                             "allow_in_bindings": 0,
-                            "rows": "",
-                            "placeholder": "",
-                            "new_lines": ""
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
                         },
                         {
-                            "key": "field_691ba7f9879ea",
-                            "label": "Container",
-                            "name": "container",
+                            "key": "field_6928af813038f",
+                            "label": "Ausrichtung",
+                            "name": "alignment",
                             "aria-label": "",
                             "type": "select",
                             "instructions": "",
@@ -1722,11 +1721,10 @@
                                 "id": ""
                             },
                             "choices": {
-                                "container-small": "container-small",
-                                "container-lg": "container-lg",
-                                "container-fluid": "container-fluid"
+                                "left": "Links",
+                                "middle": "Mitte"
                             },
-                            "default_value": "container-lg",
+                            "default_value": "middle",
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
@@ -2559,5 +2557,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1764108937
+    "modified": 1764274176
 }
