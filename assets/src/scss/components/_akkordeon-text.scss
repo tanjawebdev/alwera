@@ -99,3 +99,9 @@
 .accordion-item {
   border-bottom: 0.5px solid #4f1e2733; /* choose your color */
 }
+
+@media (max-width: 768px) {
+  .accordionText-wrapper {
+    flex-direction: column;
+  }
+}
