@@ -21,15 +21,15 @@
     margin-left: auto;
 
     @include media-breakpoint-up(lg) {
-        max-width: calc(map-get($container-max-widths, lg) / 12 * 8);
+        max-width: calc(map-get($container-max-widths, lg) / 12 * 6);
     }
 
     @include media-breakpoint-up(xl) {
-        max-width: calc(map-get($container-max-widths, xl) / 12 * 8);
+        max-width: calc(map-get($container-max-widths, xl) / 12 * 6);
     }
 
     @include media-breakpoint-up(xxl) {
-        max-width: calc(map-get($container-max-widths, xxl) / 12 * 8);
+        max-width: calc(map-get($container-max-widths, xxl) / 12 * 6);
     }
 }
 
