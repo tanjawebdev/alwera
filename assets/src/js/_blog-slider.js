@@ -15,14 +15,19 @@ class BlogSlider {
                 perPage: 3.5,
                 perMove: 1,
                 arrows: true,
-                pagination: false,
+                pagination: true,
                 breakpoints: {
                     1024: {
                         perPage: 2,
+                        padding: '2rem',
+                        gap: '1rem',
+                        arrows: false,
                     },
                     768: {
                         perPage: 1,
+                        padding: '2rem',
                         gap: '1rem',
+                        arrows: false,
                     },
                 },
             }).mount();
