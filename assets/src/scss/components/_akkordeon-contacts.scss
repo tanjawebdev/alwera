@@ -1,0 +1,25 @@
+.contact-image {
+    margin-bottom: 10px;
+    max-width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.job-title {
+    font-weight: bold;
+    font-style: italic;
+}
+
+h4 {
+    margin-bottom: 24px;
+}
+
+@media (max-width: 576px) {
+  .contact-card {
+    width: 100%;
+  }
+
+  .contact-image {
+    width: 100%;
+  }
+}

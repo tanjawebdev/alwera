@@ -10,95 +10,142 @@
     flex: 3;
 }
 
-.accordion-body {
+.accordionText-wrapper .accordion-body {
     padding-left: 4rem;
 }
 
-/* Space for our icon */
+/* --------------------------------------------------------
+   SHARED BASE STYLING (arrow shape, box, rotation)
+   Applies to ALL accordions
+-------------------------------------------------------- */
+
 .accordion-button {
   position: relative;
-  padding-left: 4rem;
 }
 
-/* BOX (does NOT rotate) */
+/* Square box (static) */
 .accordion-button::before {
   content: "";
   position: absolute;
-  left: 0.8rem;
   top: 50%;
-  transform: translateY(-50%);
   width: 2rem;
   height: 2rem;
-
-  background-color: #f2f2f2;
+  transform: translateY(-50%);
+  border: 1px solid black;
   border-radius: .35rem;
+  background-color: none;
 }
 
-/* ARROW (rotates) */
+/* Arrow (rotating) */
 .accordion-button::after {
   content: "";
   position: absolute;
-  left: 0.8rem;
   top: 50%;
   width: 2rem;
   height: 2rem;
-  transform: translateY(-50%) rotate(0deg);
 
-  /* Draw arrow using mask so colors can be changed */
+  /* Arrow with stem */
   -webkit-mask-image: url("data:image/svg+xml;utf8,\
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
-    <path d='M6 9l6 6 6-6' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
+      <path d='M12 4 L12 19 M6 12 L12 18 L18 12' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
     </svg>");
   mask-image: url("data:image/svg+xml;utf8,\
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
-    <path d='M6 9l6 6 6-6' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
+      <path d='M12 4 L12 19 M6 12 L12 18 L18 12' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
     </svg>");
 
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
-  -webkit-mask-size: 1rem;
-  mask-size: 1rem;
+  -webkit-mask-size: 1.1rem;
+  mask-size: 1.1rem;
 
-  background-color: #222; /* arrow color */
+  transform: translateY(-50%) rotate(0deg);
+  background-color: #222;
   transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
-/* Rotate ONLY the arrow when open */
+/* Rotate arrow when open */
 .accordion-button:not(.collapsed)::after {
   transform: translateY(-50%) rotate(180deg);
 }
 
-/* Hover styles */
+/* --------------------------------------------------------
+   DEFAULT RIGHT-SIDE POSITIONING FOR ALL ACCORDIONS
+-------------------------------------------------------- */
+
+.accordion-button {
+  padding-right: 4rem;
+  padding-left: 1rem;
+}
+
+.accordion-button::before,
+.accordion-button::after {
+  right: 0.8rem;
+  left: auto;
+}
+
+/* --------------------------------------------------------
+   LEFT-SIDE ARROW ONLY INSIDE .accordionText-wrapper
+-------------------------------------------------------- */
+
+.accordionText-wrapper .accordion-button {
+  padding-left: 4rem;
+  padding-right: 1rem;
+}
+
+.accordionText-wrapper .accordion-button::before,
+.accordionText-wrapper .accordion-button::after {
+  left: 0.8rem;
+  right: auto;
+  transform: translateY(calc(-50% + 2px));
+}
+
+.accordionText-wrapper .accordion-button:not(.collapsed)::after {
+  transform: translateY(calc(-50% + 2px)) rotate(180deg);
+}
+
+/* --------------------------------------------------------
+   HOVER STYLES
+-------------------------------------------------------- */
+
 .accordion-item:hover .accordion-button::before {
-  background-color: #17500C; /* box */
+  background-color: #17500C;
+  border: none;
 }
 
 .accordion-item:hover .accordion-button::after {
-  background-color: #fff;     /* arrow */
+  background-color: #fff;
 }
 
-/* DONT change background color when accordion item is open */
+/* --------------------------------------------------------
+   REMOVE BOOTSTRAP'S OPEN BACKGROUND + BORDERS
+-------------------------------------------------------- */
+
 .accordion-button:not(.collapsed) {
   background-color: transparent !important;
   color: inherit !important;
   box-shadow: none !important;
 }
 
-/*REMOVE Bootstrap Borders*/
+/* Remove Bootstrap borders */
 .accordion-item,
 .accordion-button,
 .accordion-collapse {
   border: none;
   box-shadow: none !important;
-  background-color: transparent !important;
+  background: transparent !important;
 }
 
-/*Add my own Borders*/
+/* Add your subtle bottom border */
 .accordion-item {
-  border-bottom: 0.5px solid #4f1e2733; /* choose your color */
+  border-bottom: 0.5px solid #4f1e2733;
 }
+
+/* --------------------------------------------------------
+   MOBILE FLEX-DIRECTION FOR .accordionText-wrapper
+-------------------------------------------------------- */
 
 @media (max-width: 768px) {
   .accordionText-wrapper {
