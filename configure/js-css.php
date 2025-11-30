@@ -29,6 +29,15 @@ function add_vite_assets() {
 		$js_uri = VITE_SERVER . '/assets/src/js/' . $file;
 		if ( VITE_BUILD ) {
 			$js_uri = DIST_URI . '/' . $manifest[ 'assets/src/js/' . $file ]['file'];
+			
+			// Enqueue CSS files that are extracted from JS imports (e.g., Splide CSS)
+			if ( isset( $manifest[ 'assets/src/js/' . $file ]['css'] ) ) {
+				foreach ( $manifest[ 'assets/src/js/' . $file ]['css'] as $index => $css_file ) {
+					$css_handle = $handle . '-css-' . $index;
+					$css_uri = DIST_URI . '/' . $css_file;
+					wp_enqueue_style( $css_handle, $css_uri, null, null );
+				}
+			}
 		}
 
 		wp_register_script( $handle, $js_uri, null, null, true );
