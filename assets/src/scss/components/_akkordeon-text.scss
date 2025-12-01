@@ -14,6 +14,12 @@
     padding-left: 4rem;
 }
 
+.accordion-body p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
 /* --------------------------------------------------------
    SHARED BASE STYLING (arrow shape, box, rotation)
    Applies to ALL accordions

@@ -1267,6 +1267,37 @@
                             "save_options": 0,
                             "allow_custom": 0,
                             "search_placeholder": ""
+                        },
+                        {
+                            "key": "field_692ddfdfc14bd",
+                            "label": "Size",
+                            "name": "size",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "large": "large",
+                                "small": "small"
+                            },
+                            "default_value": "large",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
                         }
                     ],
                     "min": "",
@@ -1682,11 +1713,11 @@
                 "layout_body_text_middle": {
                     "key": "layout_body_text_middle",
                     "name": "body_text",
-                    "label": "Text",
+                    "label": "Fließtext",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_6928a9172576f",
+                            "key": "field_691ba7e86299b",
                             "label": "Text",
                             "name": "text",
                             "aria-label": "",
@@ -1707,9 +1738,9 @@
                             "delay": 0
                         },
                         {
-                            "key": "field_6928af813038f",
-                            "label": "Ausrichtung",
-                            "name": "alignment",
+                            "key": "field_691ba7f9879ea",
+                            "label": "Container",
+                            "name": "container",
                             "aria-label": "",
                             "type": "select",
                             "instructions": "",
@@ -1721,10 +1752,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "left": "Links",
-                                "middle": "Mitte"
+                                "container-small": "container-small",
+                                "container-lg": "container-lg",
+                                "container-fluid": "container-fluid"
                             },
-                            "default_value": "middle",
+                            "default_value": "container-lg",
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
@@ -2557,5 +2589,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1764274176
+    "modified": 1764615796
 }
