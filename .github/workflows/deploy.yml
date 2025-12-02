@@ -26,7 +26,6 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_KEY }}" > ~/.ssh/github_deploy_ed25519
           chmod 600 ~/.ssh/github_deploy_ed25519
-          ssh-keyscan -p 9073 -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
       - name: Rsync Theme to Server
         env:
@@ -48,7 +47,7 @@ jobs:
           fi
 
           rsync -az --delete \
-            -e "ssh -p 9073 -i ~/.ssh/github_deploy_ed25519 -o StrictHostKeyChecking=yes" \
+            -e "ssh -p 9073 -i ~/.ssh/github_deploy_ed25519 -o StrictHostKeyChecking=accept-new" \
             --exclude ".git" \
             --exclude ".github" \
             --exclude "node_modules" \
