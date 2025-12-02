@@ -11,6 +11,7 @@ $classes = trim("$column_class $offset_class");
   <?php if ($text): ?>
     <div class="body-text rte">
       <?php echo wp_kses_post($text); ?>
+    
     </div>
   <?php endif; ?>
 </div>
