@@ -2,7 +2,7 @@ name: Deploy Theme
 
 on:
   push:
-    branches: [ "staging", "main" ]
+    branches: [ "staging", "prod" ]
 
 jobs:
   build-and-deploy:
@@ -26,20 +26,20 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_KEY }}" > ~/.ssh/github_deploy_ed25519
           chmod 600 ~/.ssh/github_deploy_ed25519
-          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          ssh-keyscan -p 9073 -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
       - name: Rsync Theme to Server
         env:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_STAGING: ${{ secrets.REMOTE_PATH_STAGING }}
           REMOTE_PROD: ${{ secrets.REMOTE_PATH_PROD }}
-          THEME_SLUG: projecttheme
+          THEME_SLUG: alwera
         run: |
           # Nur explizit zuordnen
           if [ "${GITHUB_REF_NAME}" = "staging" ]; then
             TARGET="${REMOTE_STAGING}"
             USER="${{ secrets.SSH_USER_STAGING }}"
-          elif [ "${GITHUB_REF_NAME}" = "main" ]; then
+          elif [ "${GITHUB_REF_NAME}" = "prod" ]; then
             TARGET="${REMOTE_PROD}"
             USER="${{ secrets.SSH_USER_PROD }}"
           else
@@ -48,7 +48,7 @@ jobs:
           fi
 
           rsync -az --delete \
-            -e "ssh -i ~/.ssh/github_deploy_ed25519 -o StrictHostKeyChecking=yes" \
+            -e "ssh -p 9073 -i ~/.ssh/github_deploy_ed25519 -o StrictHostKeyChecking=yes" \
             --exclude ".git" \
             --exclude ".github" \
             --exclude "node_modules" \
