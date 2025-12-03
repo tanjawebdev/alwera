@@ -55,4 +55,4 @@ jobs:
             --exclude ".env" \
             --exclude ".DS_Store" \
             ./ \
-            "$USER@$SSH_HOST:$TARGET/wp-content/themes/$THEME_SLUG/"
+            alwerastaging@ld12.einfachtoll.com:/var/www/alwerastaging/alwerastaging/staging.alwera.at/wp-content/themes/alwera/
