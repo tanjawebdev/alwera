@@ -76,6 +76,9 @@ while (have_rows('page_modules')) : the_row();
     case 'downloadlink':
       get_template_part('template-parts/flex/layout', 'downloadlink'); break;
 
+    case 'content_blog_slider':
+      get_template_part('template-parts/flex/layout', 'content-blog-slider'); break;
+
     // Legacy cases (keeping for backwards compatibility)
     case 'intro':
       get_template_part('template-parts/flex/layout', 'intro'); break;
