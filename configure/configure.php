@@ -7,7 +7,8 @@ function _custom_theme_register_menu() {
             'menu-main' => __( 'Menu principal' ),
             'menu-button' => __( 'Menu button' ),
             'menu-footer' => __( 'Menu footer' ),
-        )
+            'menu-legal' => __( 'Menu legal' ),
+            )
     );
 }
 add_action( 'init', '_custom_theme_register_menu' );

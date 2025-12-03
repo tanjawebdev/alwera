@@ -1,8 +1,15 @@
-
 header {
     padding: 1.2rem 3rem;
     align-items: center;
     margin: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 1px solid $primary;
+    background: #ffffff;
 }
 
 header .site-branding {
@@ -36,7 +43,7 @@ header .navigation {
             width: 100%;
             background: $primary;
             position: absolute;
-            bottom: -2.6rem;
+            bottom: -2.7rem;
             left: 0;
             opacity: 0;
             transition: 0.2s ease-out opacity;
@@ -70,6 +77,10 @@ header .navigation {
         color: white;
         border-color: $secondary !important;
     }
+}
+
+.mobile-menu li.btn {
+    width: 100%;
 }
 
 .menu-toggle {
@@ -106,11 +117,14 @@ header .navigation {
     display: flex;
     background: none;
     border: none;
-    padding: 0.5rem;
+    padding: 1.5rem 0.5rem;
+    height: 3rem;
+    width: 3rem;
 
     span {
-        width: 2rem;
-        height: 2px;
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5px;
         background-color: $primary;
     }
 
@@ -135,11 +149,11 @@ header .navigation {
     justify-content: center;
 
     &__inner {
-        width: min(90%, 32rem);
-        padding: 2.4rem;
+        width: 100%;
+        padding: 1.1rem 2.9rem;
         display: flex;
         flex-direction: column;
-        gap: 2.4rem;
+        gap: 10%;
     }
 
     &__header {
@@ -153,22 +167,29 @@ header .navigation {
     }
 
     &__nav {
+        padding: 0 3rem;
+
         ul {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            gap: 1.6rem;
+            gap: 5vh;
             font-size: 1.8rem;
+            font-weight: 600;
             color: $primary;
         }
     }
 
-    &__buttons ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+    &__buttons {
+        padding: 0 3rem;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
     }
 
     &__button-list li {
