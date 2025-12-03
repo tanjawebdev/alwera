@@ -26,7 +26,23 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_KEY }}" > ~/.ssh/github_deploy_ed25519
           chmod 600 ~/.ssh/github_deploy_ed25519
-          ssh-keyscan -p 9073 -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Debug SSH connectivity
+        run: |
+          echo "Testing SSH port..."
+          nc -vz ld12.einfachtoll.com 9073 || true
+
+      - name: Try SSH verbose
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER_STAGING }}
+        run: |
+          echo "Trying SSH connection..."
+          ssh -vvv -p 9073 \
+            -i ~/.ssh/github_deploy_ed25519 \
+            -o ConnectTimeout=10 \
+            -o StrictHostKeyChecking=no \
+            "$SSH_USER@$SSH_HOST" echo "OK" || true
 
       - name: Rsync Theme to Server
         env:
@@ -48,7 +64,7 @@ jobs:
           fi
 
           rsync -az --delete \
-            -e "ssh -p 9073 -i ~/.ssh/github_deploy_ed25519 -o StrictHostKeyChecking=yes" \
+            -e "ssh -p 9073 -i ~/.ssh/github_deploy_ed25519 -o StrictHostKeyChecking=accept-new" \
             --exclude ".git" \
             --exclude ".github" \
             --exclude "node_modules" \
