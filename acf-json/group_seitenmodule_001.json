@@ -1582,6 +1582,28 @@
                                             "parent_repeater": "field_691ba74762993"
                                         },
                                         {
+                                            "key": "field_6931c710c8d88",
+                                            "label": "Job Title",
+                                            "name": "job_title",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "allow_in_bindings": 0,
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_691ba74762993"
+                                        },
+                                        {
                                             "key": "field_691ba77762996",
                                             "label": "Name",
                                             "name": "name",
@@ -2595,5 +2617,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1764869680
+    "modified": 1764869956
 }
