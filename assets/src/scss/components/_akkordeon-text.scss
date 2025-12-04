@@ -34,10 +34,10 @@
   content: "";
   position: absolute;
   top: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   transform: translateY(-50%);
-  border: 1px solid black;
+  border: 1px solid $dark-red;
   border-radius: .35rem;
   background-color: none;
 }
@@ -47,28 +47,28 @@
   content: "";
   position: absolute;
   top: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
 
   /* Arrow with stem */
   -webkit-mask-image: url("data:image/svg+xml;utf8,\
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
-      <path d='M12 4 L12 19 M6 12 L12 18 L18 12' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'>\
+      <path d='M18 6 L18 27 M9 18 L18 27 L27 18' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
     </svg>");
   mask-image: url("data:image/svg+xml;utf8,\
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\
-      <path d='M12 4 L12 19 M6 12 L12 18 L18 12' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'>\
+      <path d='M18 6 L18 27 M9 18 L18 27 L27 18' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/>\
     </svg>");
 
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
-  -webkit-mask-size: 1.1rem;
-  mask-size: 1.1rem;
+  -webkit-mask-size: 1.65rem;
+  mask-size: 1.65rem;
 
   transform: translateY(-50%) rotate(0deg);
-  background-color: #222;
+  background-color: $dark-red;
   transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
@@ -84,6 +84,8 @@
 .accordion-button {
   padding-right: 4rem;
   padding-left: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .accordion-button::before,
@@ -105,11 +107,11 @@
 .accordionText-wrapper .accordion-button::after {
   left: 0.8rem;
   right: auto;
-  transform: translateY(calc(-50% + 2px));
+  transform: translateY(calc(-50%));
 }
 
 .accordionText-wrapper .accordion-button:not(.collapsed)::after {
-  transform: translateY(calc(-50% + 2px)) rotate(180deg);
+  transform: translateY(calc(-50%)) rotate(180deg);
 }
 
 /* --------------------------------------------------------
@@ -147,6 +149,11 @@
 /* Add your subtle bottom border */
 .accordion-item {
   border-bottom: 0.5px solid #4f1e2733;
+}
+
+.accordion-item h3 {
+  margin: 0px;
+  margin-left: 10px;
 }
 
 /* --------------------------------------------------------

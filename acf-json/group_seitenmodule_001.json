@@ -783,7 +783,7 @@
                             "label": "Text",
                             "name": "text",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -793,11 +793,12 @@
                                 "id": ""
                             },
                             "default_value": "",
+                            "acfe_textarea_code": 0,
                             "maxlength": "",
                             "allow_in_bindings": 0,
+                            "rows": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "new_lines": ""
                         },
                         {
                             "key": "field_691ba5a4502ee",
@@ -977,9 +978,9 @@
                             "label": "Text",
                             "name": "text",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
-                            "required": 0,
+                            "required": false,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -987,11 +988,11 @@
                                 "id": ""
                             },
                             "default_value": "",
+                            "new_lines": "",
                             "maxlength": "",
-                            "allow_in_bindings": 0,
                             "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "rows": "",
+                            "acfe_textarea_code": 0
                         },
                         {
                             "key": "field_691ba5f7502f4",
@@ -1207,6 +1208,32 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_6931c614e8f64",
+                            "label": "Pagelink",
+                            "name": "pagelink",
+                            "aria-label": "",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": "",
+                            "allow_archives": 0,
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0
                         },
                         {
                             "key": "field_691ba68c502fb",
@@ -1552,28 +1579,6 @@
                                             "mime_types": "",
                                             "allow_in_bindings": 0,
                                             "preview_size": "medium",
-                                            "parent_repeater": "field_691ba74762993"
-                                        },
-                                        {
-                                            "key": "field_691ba76f62995",
-                                            "label": "Job Title",
-                                            "name": "job_title",
-                                            "aria-label": "",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "maxlength": "",
-                                            "allow_in_bindings": 0,
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
                                             "parent_repeater": "field_691ba74762993"
                                         },
                                         {
@@ -2551,77 +2556,6 @@
                     "acfe_flexible_settings_size": "medium",
                     "acfe_flexible_modal_edit_size": false,
                     "acfe_flexible_category": false
-                },
-                "layout_693092d3d8b2b": {
-                    "key": "layout_693092d3d8b2b",
-                    "name": "content_blog_slider",
-                    "label": "Blog Slider",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_693093bbd8b32",
-                            "label": "Headline",
-                            "name": "headline",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_693095379e0b7",
-                            "label": "Container",
-                            "name": "container",
-                            "aria-label": "",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "container-small": "container-small",
-                                "container-lg": "container-lg",
-                                "container-fluid": "container-fluid"
-                            },
-                            "default_value": "container-fluid",
-                            "return_format": "value",
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "allow_in_bindings": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "create_options": 0,
-                            "save_options": 0,
-                            "allow_custom": 0,
-                            "search_placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": "",
-                    "acfe_flexible_render_template": false,
-                    "acfe_flexible_render_style": false,
-                    "acfe_flexible_render_script": false,
-                    "acfe_flexible_thumbnail": false,
-                    "acfe_flexible_settings": false,
-                    "acfe_flexible_settings_size": "medium",
-                    "acfe_flexible_modal_edit_size": false,
-                    "acfe_flexible_category": false
                 }
             },
             "min": "",
@@ -2661,5 +2595,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1764791627
+    "modified": 1764869680
 }
