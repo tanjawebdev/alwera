@@ -1,0 +1,81 @@
+.contact-card {
+    border: none;
+    background-color: $secondary;
+    position: relative;
+    min-height: 380px;
+}
+
+.contact-card-img-top {
+    height: 380px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.contact-card:hover .contact-card-img-top {
+    opacity: 0.3;
+}
+
+.contact-card-body {
+    pointer-events: none;
+    z-index: 2;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-card-name {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    transition: margin-bottom 0.3s ease;
+}
+
+.contact-card-info {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    pointer-events: none;
+
+    p {
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    a {
+        pointer-events: auto;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: $primary !important;
+        }
+    }
+
+    i {
+        font-size: 1.2rem;
+    }
+}
+
+.contact-card:hover .contact-card-info {
+    opacity: 1;
+    max-height: 200px;
+    pointer-events: auto;
+}
+
+.contact-card:hover .contact-card-name {
+    margin-bottom: 1.5rem;
+}
+
+.contact-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    z-index: 1;
+}

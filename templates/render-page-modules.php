@@ -79,6 +79,9 @@ while (have_rows('page_modules')) : the_row();
     case 'content_blog_slider':
       get_template_part('template-parts/flex/layout', 'content-blog-slider'); break;
 
+    case 'contact_cards':
+      get_template_part('template-parts/flex/layout', 'contact-cards'); break;
+
     // Legacy cases (keeping for backwards compatibility)
     case 'intro':
       get_template_part('template-parts/flex/layout', 'intro'); break;
