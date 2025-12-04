@@ -38,7 +38,15 @@ $selected_departments = get_sub_field('department');
               <h3 class="contact-card-name"><?php the_title(); ?></h3>
               
               <div class="contact-card-info">
-                <?php if (get_field('telephone')): ?>
+
+            <?php $departments = get_the_terms(get_the_ID(), 'department'); ?>
+            <?php if ($departments): ?>
+              <?php foreach ($departments as $department): ?>
+                <p class="mb-1"><?php echo $department->name; ?></p>
+              <?php endforeach; ?>
+            <?php endif; ?>
+
+              <?php if (get_field('telephone')): ?>
                   <p class="mb-1">
                     <i class="bi bi-telephone"></i>
                     <a href="tel:<?php echo esc_attr(get_field('telephone')); ?>" class="text-white text-decoration-none">
