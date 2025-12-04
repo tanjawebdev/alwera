@@ -1,8 +1,9 @@
 <?php
 $items = get_sub_field('items');
+$interval = get_sub_field('interval') ?: 3000;
 ?>
 <?php if ($items): ?>
-  <div class="hero-gallery typo-white splide">
+  <div class="hero-gallery typo-white splide" data-interval="<?php echo esc_attr($interval); ?>">
     <div class="splide__track">
       <ul class="splide__list">
         <?php foreach ($items as $item): ?>
@@ -34,11 +35,20 @@ $items = get_sub_field('items');
                 
               </div>
 
-              <?php if ($item['image']): ?>
-                <picture class="hero-picture">
-                  <?php echo wp_get_attachment_image($item['image']['ID'], 'large', false, ['class' => 'img-fluid']); ?>
-                </picture>
-              <?php endif; ?>
+              <div class="hero-media">
+                <?php if ($item['image']): ?>
+                  <picture class="hero-picture">
+                    <?php echo wp_get_attachment_image($item['image']['ID'], 'large', false, ['class' => 'img-fluid']); ?>
+                  </picture>
+                <?php endif; ?>
+
+                <?php if ($item['video']): ?>
+                  <video autoplay loop muted>
+                    <source src="<?php echo esc_url($item['video']['url']); ?>" type="<?php echo esc_attr($item['video']['mime_type']); ?>">
+                    Your browser does not support the video tag.
+                  </video>
+                <?php endif; ?>
+              </div>
             </div>
           </li>
         <?php endforeach; ?>

@@ -1,5 +1,6 @@
 <?php
 $image = get_sub_field('image');
+$video = get_sub_field('video');
 $title = get_sub_field('title');
 $subtitle = get_sub_field('subtitle');
 $title_tag = get_sub_field('title_tag') ?: 'h2';
@@ -18,7 +19,20 @@ $title_tag = in_array($title_tag, ['h1', 'h2', 'h3']) ? $title_tag : 'h2';
       </<?php echo tag_escape($title_tag); ?>>
     <?php endif; ?>
   </div>
-  <picture class="hero-picture">
-    <?php echo wp_get_attachment_image($image['ID'], 'large', false, ['class' => 'img-fluid']); ?>
-  </picture>
+
+  <div class="hero-media">
+
+    <?php if ($image): ?>
+      <picture class="hero-picture">
+        <?php echo wp_get_attachment_image($image['ID'], 'large', false, ['class' => 'img-fluid']); ?>
+      </picture>
+    <?php endif; ?>
+
+    <?php if ($video): ?>
+      <video autoplay loop muted>
+        <source src="<?php echo esc_url($video['url']); ?>" type="<?php echo esc_attr($video['mime_type']); ?>">
+        Your browser does not support the video tag.
+      </video>
+    <?php endif; ?>
+  </div>
 </div>

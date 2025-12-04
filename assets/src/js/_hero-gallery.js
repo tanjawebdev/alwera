@@ -8,16 +8,19 @@ class HeroGallery {
 
 	init() {
 		const heroGalleries = document.querySelectorAll('.hero-gallery');
-		
+
 		heroGalleries.forEach((gallery) => {
+			const interval = parseInt(gallery.dataset.interval) || 3000;
+
 			new Splide(gallery, {
 				type: 'fade',
-                rewind: true,
+				rewind: true,
 				perPage: 1,
 				arrows: false,
 				pagination: true,
 				autoplay: true,
-                interval: 3000,
+				pauseOnHover: false,
+				interval: interval,
 			}).mount();
 		});
 	}

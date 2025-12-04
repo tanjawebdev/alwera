@@ -69,6 +69,58 @@
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
+                                    "key": "field_691ba3a7b15e0",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "uploader": "",
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "acfe_thumbnail": 0,
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "allow_in_bindings": 0,
+                                    "preview_size": "medium",
+                                    "parent_repeater": "elemente"
+                                },
+                                {
+                                    "key": "field_6931c4d9fb9e0",
+                                    "label": "Video",
+                                    "name": "video",
+                                    "aria-label": "",
+                                    "type": "file",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "uploader": "",
+                                    "return_format": "array",
+                                    "min_size": "",
+                                    "max_size": 300,
+                                    "mime_types": "mp4, webm, mov",
+                                    "allow_in_bindings": 0,
+                                    "library": "all",
+                                    "parent_repeater": "elemente"
+                                },
+                                {
                                     "key": "field_691ba33cb15db",
                                     "label": "Subtitle",
                                     "name": "subtitle",
@@ -206,37 +258,31 @@
                                     "return_format": "url",
                                     "allow_in_bindings": 0,
                                     "parent_repeater": "elemente"
-                                },
-                                {
-                                    "key": "field_691ba3a7b15e0",
-                                    "label": "Image",
-                                    "name": "image",
-                                    "aria-label": "",
-                                    "type": "image",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "uploader": "",
-                                    "return_format": "array",
-                                    "library": "all",
-                                    "acfe_thumbnail": 0,
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": "",
-                                    "allow_in_bindings": 0,
-                                    "preview_size": "medium",
-                                    "parent_repeater": "elemente"
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_6931d1542bc72",
+                            "label": "Intervall (Slide wechseln nach x Millisekunden)",
+                            "name": "interval",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 3000,
+                            "min": "",
+                            "max": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
                         },
                         {
                             "key": "field_691ba3c5b15e1",
@@ -315,6 +361,28 @@
                             "mime_types": "",
                             "allow_in_bindings": 0,
                             "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_6931c739380d0",
+                            "label": "Video",
+                            "name": "video",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "uploader": "",
+                            "return_format": "array",
+                            "min_size": "",
+                            "max_size": 300,
+                            "mime_types": "mp4, mov, webm",
+                            "allow_in_bindings": 0,
+                            "library": "all"
                         },
                         {
                             "key": "field_691ba4a6502e1",
@@ -2661,5 +2729,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1764791627
+    "modified": 1764872715
 }
