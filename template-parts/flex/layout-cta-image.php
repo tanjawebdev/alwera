@@ -17,7 +17,7 @@ $pagelink = get_sub_field('pagelink');
   <?php endif; ?>
 
   <div class="cta-content">
-    <div class="cta-description">
+    <div class="cta-description col-md-6">
       <?php if ($title): ?>
         <h2><?php echo esc_html($title); ?></h2>
       <?php endif; ?>
