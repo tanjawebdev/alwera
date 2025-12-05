@@ -49,11 +49,15 @@ $departments = get_terms(array(
               <?php while ($employees->have_posts()):
                 $employees->the_post(); ?>
 
-                <div class="contact-card">
+                <div class="accordion-contact-card">
                   <?php if (has_post_thumbnail()): ?>
-                    <?php the_post_thumbnail('large', ['class' => 'contact-image']); ?>
+                    <div class="contact-image-wrapper">
+                      <picture>
+                        <?php the_post_thumbnail('medium', ['class' => 'contact-image']); ?>
+                      </picture>
+                    </div>
                   <?php endif; ?>
-                  <div class="contact-card-body">
+                  <div class="accordion-contact-card-body">
                     <?php $departments = get_the_terms(get_the_ID(), 'department'); ?>
 
                     <?php if ($departments && !is_wp_error($departments)): ?>
