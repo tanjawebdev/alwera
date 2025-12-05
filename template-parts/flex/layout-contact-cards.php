@@ -1,5 +1,6 @@
 <?php
 $selected_departments = get_sub_field('department');
+$title = get_sub_field('title');
 ?>
 
 <?php if ($selected_departments): ?>
@@ -23,57 +24,56 @@ $selected_departments = get_sub_field('department');
   ?>
 
   <?php if ($employees->have_posts()): ?>
-    <div class="row g-2">
+    <?php if ($title): ?>
+      <h2 class="h1"><?php echo $title; ?></h2>
+    <?php endif; ?>
 
+    <div class="contact-card-wrapper row">
       <?php while ($employees->have_posts()):
         $employees->the_post(); ?>
-        <div class="col-md-3">
-
-          <div class="contact-card d-block overflow-hidden position-relative">
-
-            <?php if (has_post_thumbnail()): ?>
+        <div class="contact-card-employee col-sm-4 col-lg-3">
+          <?php if (has_post_thumbnail()): ?>
+            <picture class="contact-card-img">
               <?php the_post_thumbnail('medium', ['class' => 'contact-card-img-top']); ?>
+            </picture>
+          <?php endif; ?>
+
+          <div class="contact-card-body">
+            <?php $departments = get_the_terms(get_the_ID(), 'department'); ?>
+            <?php if ($departments): ?>
+              <div class="contact-card-departments">
+                <?php foreach ($departments as $department): ?>
+                  <span class="contact-card-department"><?php echo $department->name; ?></span>
+                <?php endforeach; ?>
+              </div>
             <?php endif; ?>
 
-            <div class="contact-card-body position-absolute bottom-0 start-0 w-100 text-white">
-              <h3 class="contact-card-name"><?php the_title(); ?></h3>
+          <h3 class="contact-card-name"><?php the_title(); ?></h3>
 
-              <div class="contact-card-info">
-
-                <?php $departments = get_the_terms(get_the_ID(), 'department'); ?>
-                <?php if ($departments): ?>
-                  <?php foreach ($departments as $department): ?>
-                    <p class="mb-1"><?php echo $department->name; ?></p>
-                  <?php endforeach; ?>
-                <?php endif; ?>
-
+          <div class="contact-card-info">
                 <?php if (get_field('telephone')): ?>
-                  <p class="mb-1">
-                    <i class="bi bi-telephone"></i>
-                    <a href="tel:<?php echo esc_attr(get_field('telephone')); ?>" class="text-white text-decoration-none">
-                      <?php the_field('telephone'); ?>
+                  <p>
+                    <a href="tel:<?php echo esc_attr(get_field('telephone')); ?>">
+                      T: <?php the_field('telephone'); ?>
                     </a>
                   </p>
                 <?php endif; ?>
 
                 <?php if (get_field('mobile')): ?>
-                  <p class="mb-1">
-                    <i class="bi bi-phone"></i>
-                    <a href="tel:<?php echo esc_attr(get_field('mobile')); ?>" class="text-white text-decoration-none">
-                      <?php the_field('mobile'); ?>
+                  <p>
+                    <a href="tel:<?php echo esc_attr(get_field('mobile')); ?>">
+                      M: <?php the_field('mobile'); ?>
                     </a>
                   </p>
                 <?php endif; ?>
 
                 <?php if (get_field('mail')): ?>
-                  <p class="mb-1">
-                    <i class="bi bi-envelope"></i>
-                    <a href="mailto:<?php echo esc_attr(get_field('mail')); ?>" class="text-white text-decoration-none">
-                      <?php the_field('mail'); ?>
+                  <p>
+                    <a href="mailto:<?php echo esc_attr(get_field('mail')); ?>">
+                      E: <?php the_field('mail'); ?>
                     </a>
                   </p>
                 <?php endif; ?>
-              </div>
             </div>
 
           </div>
