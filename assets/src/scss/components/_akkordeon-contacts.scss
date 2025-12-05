@@ -1,17 +1,35 @@
+.accordion-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .contact-image {
-    margin-bottom: 10px;
-    max-width: 100%; 
-    height: auto; 
-    display: block;
+  margin-bottom: 10px;
+  max-height: 100%;
+  display: block;
 }
 
 .job-title {
-    font-weight: bold;
-    font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
 h4 {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 @media (max-width: 576px) {

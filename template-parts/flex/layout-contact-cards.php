@@ -1,87 +1,105 @@
 <?php
-$selected_departments = get_sub_field('department');
+// 1. Get ALL Department Terms (Taxonomy: 'department')
+$departments = get_terms(array(
+  'taxonomy' => 'department', // Confirmed Taxonomy Slug
+  'hide_empty' => true,         // Only show departments that have employees assigned
+  'orderby' => 'name',
+  'order' => 'ASC'
+));
 ?>
 
-<?php if ($selected_departments): ?>
-  <?php
-  // Query employees from selected departments
-  $args = array(
-    'post_type' => 'employee',
-    'posts_per_page' => -1,
-    'orderby' => 'title',
-    'order' => 'ASC',
-    'tax_query' => array(
-      array(
-        'taxonomy' => 'department',
-        'field' => 'term_id',
-        'terms' => $selected_departments,
-      ),
-    ),
-  );
+<?php if (!empty($departments) && !is_wp_error($departments)): ?>
+  <div class="accordion" id="accordionContacts">
 
-  $employees = new WP_Query($args);
-  ?>
+    <?php foreach ($departments as $dept_index => $department):
 
-  <?php if ($employees->have_posts()): ?>
-    <div class="row g-2">
+      // Get the department name and ID
+      $department_name = esc_html($department->name);
+      $department_id = $department->term_id;
 
-      <?php while ($employees->have_posts()): $employees->the_post(); ?>
-        <div class="col-md-3">
+      // 2. Query Employees for the Current Department
+      $args = array(
+        'post_type' => 'employee', // Confirmed Post Type Slug
+        'posts_per_page' => -1,
+        'orderby' => 'title',
+        'order' => 'ASC',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'department',
+            'field' => 'term_id', // Use the term ID for reliable filtering
+            'terms' => $department_id,
+          ),
+        ),
+      );
 
-          <div class="contact-card d-block overflow-hidden position-relative">
+      $employees = new WP_Query($args);
+      ?>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseDept<?php echo $dept_index; ?>" aria-expanded="false">
+            <?php echo $department_name; ?>
+          </button>
+        </h3>
+        <div id="collapseDept<?php echo $dept_index; ?>" class="accordion-collapse collapse"
+          data-bs-parent="#accordionContacts">
+          <div class="accordion-body">
 
-            <?php if (has_post_thumbnail()): ?>
-              <?php the_post_thumbnail('medium', ['class' => 'contact-card-img-top']); ?>
-            <?php endif; ?>
+            <?php if ($employees->have_posts()): ?>
+              <div class="row g-4">
 
-            <div class="contact-card-body position-absolute bottom-0 start-0 w-100 text-white">
-              <h3 class="contact-card-name"><?php the_title(); ?></h3>
-              
-              <div class="contact-card-info">
+                <?php while ($employees->have_posts()):
+                  $employees->the_post(); ?>
+                  <div class="col-md-4 col-sm-6">
+                    <div class="contact-card">
 
-            <?php $departments = get_the_terms(get_the_ID(), 'department'); ?>
-            <?php if ($departments): ?>
-              <?php foreach ($departments as $department): ?>
-                <p class="mb-1"><?php echo $department->name; ?></p>
-              <?php endforeach; ?>
-            <?php endif; ?>
+                      <?php if (has_post_thumbnail()): ?>
+                        <?php the_post_thumbnail('large', ['class' => 'contact-image']); ?>
+                      <?php endif; ?>
 
-              <?php if (get_field('telephone')): ?>
-                  <p class="mb-1">
-                    <i class="bi bi-telephone"></i>
-                    <a href="tel:<?php echo esc_attr(get_field('telephone')); ?>" class="text-white text-decoration-none">
-                      <?php the_field('telephone'); ?>
-                    </a>
-                  </p>
-                <?php endif; ?>
+                      <?php // Employee Name (Post Title) ?>
+                      <?php if (get_the_title()): ?>
+                        <h4><?php the_title(); ?></h4>
+                      <?php endif; ?>
 
-                <?php if (get_field('mobile')): ?>
-                  <p class="mb-1">
-                    <i class="bi bi-phone"></i>
-                    <a href="tel:<?php echo esc_attr(get_field('mobile')); ?>" class="text-white text-decoration-none">
-                      <?php the_field('mobile'); ?>
-                    </a>
-                  </p>
-                <?php endif; ?>
+                      <?php // Assuming 'job_title' is a custom field on the Employee post type ?>
+                      <?php if (get_field('job_title')): ?>
+                        <p class="job-title"><?php the_field('job_title'); ?></p>
+                      <?php endif; ?>
 
-                <?php if (get_field('mail')): ?>
-                  <p class="mb-1">
-                    <i class="bi bi-envelope"></i>
-                    <a href="mailto:<?php echo esc_attr(get_field('mail')); ?>" class="text-white text-decoration-none">
-                      <?php the_field('mail'); ?>
-                    </a>
-                  </p>
-                <?php endif; ?>
+                      <?php // Contact information custom fields ?>
+                      <?php if (get_field('telephone')): ?>
+                        <p><strong>Tel:</strong> <a
+                            href="tel:<?php echo esc_attr(get_field('telephone')); ?>"><?php the_field('telephone'); ?></a>
+                        </p>
+                      <?php endif; ?>
+
+                      <?php if (get_field('mobile')): ?>
+                        <p><strong>Mobil:</strong> <a
+                            href="tel:<?php echo esc_attr(get_field('mobile')); ?>"><?php the_field('mobile'); ?></a>
+                        </p>
+                      <?php endif; ?>
+
+                      <?php if (get_field('mail')): ?>
+                        <p><strong>E-Mail:</strong> <a
+                            href="mailto:<?php echo esc_attr(get_field('mail')); ?>"><?php the_field('mail'); ?></a>
+                        </p>
+                      <?php endif; ?>
+
+                    </div>
+                  </div>
+                <?php endwhile; ?>
+
               </div>
-            </div>
+            <?php else: ?>
+              <p>No employees found for the <?php echo $department_name; ?> department.</p>
+            <?php endif; ?>
+
+            <?php wp_reset_postdata(); ?>
 
           </div>
-
         </div>
-      <?php endwhile; ?>
-      <?php wp_reset_postdata(); ?>
-
-    </div>
-  <?php endif; ?>
-
+      </div>
+    <?php endforeach; ?>
+  </div>
 <?php endif; ?>
