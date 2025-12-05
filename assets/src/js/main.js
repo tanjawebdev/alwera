@@ -1,6 +1,7 @@
 import General from './_general';
 import HeroGallery from './_hero-gallery';
 import BlogSlider from './_blog-slider';
+import InfoBoxSelection from './_info-box-selection';
 
 const App = {
 	/**
@@ -24,6 +25,12 @@ const App = {
 			return new BlogSlider();
 		}
 		initBlogSlider();
+
+		// Info Box Selection (tabbed interface)
+		function initInfoBoxSelection() {
+			return new InfoBoxSelection();
+		}
+		initInfoBoxSelection();
 	},
 };
 
