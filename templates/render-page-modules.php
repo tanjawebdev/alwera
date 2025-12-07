@@ -82,6 +82,9 @@ while (have_rows('page_modules')) : the_row();
     case 'contact_cards':
       get_template_part('template-parts/flex/layout', 'contact-cards'); break;
 
+    case 'timeline':
+      get_template_part('template-parts/flex/layout', 'timeline'); break;  
+
     // Legacy cases (keeping for backwards compatibility)
     case 'intro':
       get_template_part('template-parts/flex/layout', 'intro'); break;
