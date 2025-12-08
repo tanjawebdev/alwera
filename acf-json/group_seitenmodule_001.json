@@ -147,7 +147,7 @@
                                     "label": "Title",
                                     "name": "title",
                                     "aria-label": "",
-                                    "type": "text",
+                                    "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -157,11 +157,12 @@
                                         "id": ""
                                     },
                                     "default_value": "",
+                                    "acfe_textarea_code": 0,
                                     "maxlength": "",
                                     "allow_in_bindings": 0,
+                                    "rows": "",
                                     "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
+                                    "new_lines": "",
                                     "parent_repeater": "elemente"
                                 },
                                 {
@@ -202,7 +203,7 @@
                                     "label": "Text",
                                     "name": "text",
                                     "aria-label": "",
-                                    "type": "text",
+                                    "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -212,11 +213,12 @@
                                         "id": ""
                                     },
                                     "default_value": "",
+                                    "acfe_textarea_code": 0,
                                     "maxlength": "",
                                     "allow_in_bindings": 0,
+                                    "rows": "",
                                     "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
+                                    "new_lines": "",
                                     "parent_repeater": "elemente"
                                 },
                                 {
@@ -389,7 +391,7 @@
                             "label": "Title",
                             "name": "title",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -399,11 +401,12 @@
                                 "id": ""
                             },
                             "default_value": "",
+                            "acfe_textarea_code": 0,
                             "maxlength": "",
                             "allow_in_bindings": 0,
+                            "rows": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "new_lines": ""
                         },
                         {
                             "key": "field_title_tag_hero_single",
@@ -851,7 +854,7 @@
                             "label": "Text",
                             "name": "text",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -861,11 +864,12 @@
                                 "id": ""
                             },
                             "default_value": "",
+                            "acfe_textarea_code": 0,
                             "maxlength": "",
                             "allow_in_bindings": 0,
+                            "rows": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "new_lines": ""
                         },
                         {
                             "key": "field_691ba5a4502ee",
@@ -1045,7 +1049,7 @@
                             "label": "Text",
                             "name": "text",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1055,11 +1059,12 @@
                                 "id": ""
                             },
                             "default_value": "",
+                            "acfe_textarea_code": 0,
                             "maxlength": "",
                             "allow_in_bindings": 0,
+                            "rows": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "new_lines": ""
                         },
                         {
                             "key": "field_691ba5f7502f4",
@@ -2916,5 +2921,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1765144213
+    "modified": 1765218453
 }
