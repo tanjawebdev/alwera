@@ -48,32 +48,32 @@ $title = get_sub_field('title');
               </div>
             <?php endif; ?>
 
-          <h3 class="contact-card-name"><?php the_title(); ?></h3>
+            <h3 class="contact-card-name"><?php the_title(); ?></h3>
 
-          <div class="contact-card-info">
-                <?php if (get_field('telephone')): ?>
-                  <p>
-                    <a href="tel:<?php echo esc_attr(get_field('telephone')); ?>">
-                      T: <?php the_field('telephone'); ?>
-                    </a>
-                  </p>
-                <?php endif; ?>
+            <div class="contact-card-info">
+              <?php if (get_field('telephone')): ?>
+                <p>
+                  <a href="tel:<?php echo esc_attr(get_field('telephone')); ?>">
+                    <strong>Tel:</strong> <?php the_field('telephone'); ?>
+                  </a>
+                </p>
+              <?php endif; ?>
 
-                <?php if (get_field('mobile')): ?>
-                  <p>
-                    <a href="tel:<?php echo esc_attr(get_field('mobile')); ?>">
-                      M: <?php the_field('mobile'); ?>
-                    </a>
-                  </p>
-                <?php endif; ?>
+              <?php if (get_field('mobile')): ?>
+                <p>
+                  <a href="tel:<?php echo esc_attr(get_field('mobile')); ?>">
+                    <strong>Mobil:</strong> <?php the_field('mobile'); ?>
+                  </a>
+                </p>
+              <?php endif; ?>
 
-                <?php if (get_field('mail')): ?>
-                  <p>
-                    <a href="mailto:<?php echo esc_attr(get_field('mail')); ?>">
-                      E: <?php the_field('mail'); ?>
-                    </a>
-                  </p>
-                <?php endif; ?>
+              <?php if (get_field('mail')): ?>
+                <p>
+                  <a href="mailto:<?php echo esc_attr(get_field('mail')); ?>">
+                    <strong>E-Mail:</strong> <?php the_field('mail'); ?>
+                  </a>
+                </p>
+              <?php endif; ?>
             </div>
 
           </div>
