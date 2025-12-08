@@ -1,7 +1,8 @@
 <?php
 $text = get_sub_field('text');
-$file_field = get_field('my_download_file');
-$file_url = $file_field['url'];
+$file_data = get_field('my_download_file');
+$file_url = $file_data['url'];
+$file_name = $file_data['filename'];
 ?>
 
 <?php if ($file_url): ?>
@@ -12,7 +13,8 @@ $file_url = $file_field['url'];
 
 
     <div class="downloadlink">
-      <a href="<?php echo esc_url($file_url); ?>" class="btn btn-primary" download>Download</a>
+      <a href="<?php echo esc_url($file_url); ?>" class="btn btn-primary"
+        download="<?php echo esc_attr($file_name); ?>">Download</a>
     </div>
   <?php endif; ?>
 </div>
