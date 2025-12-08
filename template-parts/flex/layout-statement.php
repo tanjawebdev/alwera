@@ -2,15 +2,14 @@
 $title = get_sub_field('title');
 $subtitle = get_sub_field('subtitle');
 $direction = get_sub_field('direction');
-$subtitle_tag_name = $subtitle_tag ? esc_attr($subtitle_tag) : 'p';
 ?>
 
 <div class="statement statement-<?php echo esc_attr($direction ?: 'top'); ?>">
   <?php if ($title): ?>
-    <h2><?php echo esc_html($title); ?></h2>
+    <h1><?php echo esc_html($title); ?></h1>
   <?php endif; ?>
 
   <?php if ($subtitle): ?>
-    <<?php echo $subtitle_tag_name; ?> class="subtitle"><?php echo esc_html($subtitle); ?></<?php echo $subtitle_tag_name; ?>>
+    <h3 class="subtitle"><?php echo esc_html($subtitle); ?></h3>
   <?php endif; ?>
 </div>
