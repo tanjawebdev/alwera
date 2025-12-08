@@ -35,12 +35,12 @@ $departments = get_terms(array(
       $employees = new WP_Query($args);
       ?>
       <div class="accordion-item">
-        <h3 class="accordion-header">
+        <div class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseDept<?php echo $dept_index; ?>" aria-expanded="false">
-            <?php echo $department_name; ?>
+            <h3><?php echo $department_name; ?></h3>
           </button>
-        </h3>
+        </div>
         <div id="collapseDept<?php echo $dept_index; ?>" class="accordion-collapse collapse"
           data-bs-parent="#accordionContacts">
           <div class="accordion-body">

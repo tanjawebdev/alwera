@@ -892,6 +892,32 @@
                             "append": ""
                         },
                         {
+                            "key": "field_69371e4bc130d",
+                            "label": "Buttonlink",
+                            "name": "buttonlink",
+                            "aria-label": "",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": "",
+                            "allow_archives": 0,
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0
+                        },
+                        {
                             "key": "field_691ba5b5502ef",
                             "label": "Image",
                             "name": "image",
@@ -1086,6 +1112,32 @@
                             "append": ""
                         },
                         {
+                            "key": "field_69371e5cc130e",
+                            "label": "Buttonlink",
+                            "name": "buttonlink",
+                            "aria-label": "",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": "",
+                            "allow_archives": 0,
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0
+                        },
+                        {
                             "key": "field_691ba5fe502f5",
                             "label": "Image",
                             "name": "image",
@@ -1278,6 +1330,32 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_69371ec555757",
+                            "label": "Buttonlink",
+                            "name": "buttonlink",
+                            "aria-label": "",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": "",
+                            "allow_archives": 0,
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0
                         },
                         {
                             "key": "field_691ba68c502fb",
@@ -2117,27 +2195,7 @@
                             "label": "Location",
                             "name": "location",
                             "aria-label": "",
-                            "type": "google_map",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "center_lat": "",
-                            "center_lng": "",
-                            "zoom": "",
-                            "height": "",
-                            "allow_in_bindings": 0
-                        },
-                        {
-                            "key": "field_691ba8b5879f8",
-                            "label": "Zoom",
-                            "name": "zoom",
-                            "aria-label": "",
-                            "type": "number",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -2147,11 +2205,9 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "min": "",
-                            "max": "",
+                            "maxlength": "",
                             "allow_in_bindings": 0,
                             "placeholder": "",
-                            "step": "",
                             "prepend": "",
                             "append": ""
                         },
@@ -2919,5 +2975,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1765218750
+    "modified": 1765220298
 }

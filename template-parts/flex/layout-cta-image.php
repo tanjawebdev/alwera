@@ -3,6 +3,7 @@ $title = get_sub_field('title');
 $subtitle = get_sub_field('subtitle');
 $text = get_sub_field('text');
 $buttontext = get_sub_field('buttontext');
+$buttonlink = get_sub_field('buttonlink');
 $image = get_sub_field('image');
 $size = get_sub_field('size');
 $pagelink = get_sub_field('pagelink');
@@ -31,7 +32,7 @@ $pagelink = get_sub_field('pagelink');
       <?php endif; ?>
     </div>
     <?php if ($buttontext): ?>
-      <a href="<?php echo esc_url($pagelink); ?>" class="btn btn-hero">
+      <a href="<?php echo esc_url($buttonlink); ?>" class="btn btn-hero">
         <span><?php echo esc_html($buttontext); ?></span>
       </a>
     <?php endif; ?>
