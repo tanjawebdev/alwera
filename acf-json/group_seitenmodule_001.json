@@ -854,7 +854,7 @@
                             "label": "Text",
                             "name": "text",
                             "aria-label": "",
-                            "type": "textarea",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -864,12 +864,11 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "acfe_textarea_code": 0,
-                            "maxlength": "",
                             "allow_in_bindings": 0,
-                            "rows": "",
-                            "placeholder": "",
-                            "new_lines": ""
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
                         },
                         {
                             "key": "field_691ba5a4502ee",
@@ -1049,7 +1048,7 @@
                             "label": "Text",
                             "name": "text",
                             "aria-label": "",
-                            "type": "textarea",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1059,12 +1058,11 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "acfe_textarea_code": 0,
-                            "maxlength": "",
                             "allow_in_bindings": 0,
-                            "rows": "",
-                            "placeholder": "",
-                            "new_lines": ""
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
                         },
                         {
                             "key": "field_691ba5f7502f4",
@@ -2921,5 +2919,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1765218453
+    "modified": 1765218750
 }
