@@ -2376,42 +2376,9 @@
                             },
                             "choices": {
                                 "h1": "h1",
-                                "h2": "h2",
-                                "h3": "h3"
+                                "h2": "h2"
                             },
                             "default_value": "h2",
-                            "return_format": "value",
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "allow_in_bindings": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "create_options": 0,
-                            "save_options": 0,
-                            "allow_custom": 0,
-                            "search_placeholder": ""
-                        },
-                        {
-                            "key": "field_69372225f05dc",
-                            "label": "Subtitle Tag",
-                            "name": "subtitle_tag",
-                            "aria-label": "",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "h1": "h1",
-                                "h2": "h2",
-                                "h3": "h3"
-                            },
-                            "default_value": "h3",
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
@@ -2444,6 +2411,37 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_69372225f05dc",
+                            "label": "Subtitle Tag",
+                            "name": "subtitle_tag",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "h2": "h2",
+                                "h3": "h3"
+                            },
+                            "default_value": "h3",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
                         },
                         {
                             "key": "field_691ba91b879fe",
@@ -3007,5 +3005,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1765220928
+    "modified": 1765221281
 }
