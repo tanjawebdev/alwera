@@ -2618,10 +2618,10 @@
                         },
                         {
                             "key": "field_691ba98287a03",
-                            "label": "Downloadlink",
-                            "name": "downloadlink",
+                            "label": "Downloadfile",
+                            "name": "downloadfile",
                             "aria-label": "",
-                            "type": "link",
+                            "type": "file",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -2630,8 +2630,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "url",
-                            "allow_in_bindings": 0
+                            "uploader": "",
+                            "return_format": "array",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "library": "all"
                         },
                         {
                             "key": "field_691ba99287a04",
@@ -2973,5 +2978,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1765223242
+    "modified": 1765223932
 }
