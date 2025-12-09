@@ -130,6 +130,9 @@ while (have_rows('page_modules')) : the_row();
 
     case 'google_map':
       get_template_part('template-parts/flex/layout', 'google-map'); break;
+
+    case 'hero_gallery_blog':
+      get_template_part('template-parts/flex/layout', 'hero-gallery-blog'); break;
   }
 
   if (function_exists('section_close')) {
