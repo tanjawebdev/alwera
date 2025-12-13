@@ -20,7 +20,7 @@ $image = get_sub_field('image');
     <?php endif; ?>
 
     <?php if ($title): ?>
-      <h2><?php echo esc_html($title); ?></h2>
+      <h2 class="image-text-h2"><?php echo esc_html($title); ?></h2>
     <?php endif; ?>
 
     <?php if ($text): ?>
