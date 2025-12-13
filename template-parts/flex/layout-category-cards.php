@@ -4,11 +4,11 @@ $cards = get_sub_field('card');
 ?>
 
 <?php if ($title): ?>
-  <h2 class="category-cards-h2><?php echo esc_html($title); ?></h2>
-  <?php endif; ?>
+  <h2 class="category-cards-h2"><?php echo esc_html($title); ?></h2>
+<?php endif; ?>
 
-  <?php if ($cards): ?>
-    <div class=" row g-2">
+<?php if ($cards): ?>
+  <div class=" row g-2">
 
     <?php foreach ($cards as $card): ?>
       <div class="col-md-3">
@@ -42,5 +42,5 @@ $cards = get_sub_field('card');
       </div>
     <?php endforeach; ?>
 
-    </div>
-  <?php endif; ?>
+  </div>
+<?php endif; ?>
