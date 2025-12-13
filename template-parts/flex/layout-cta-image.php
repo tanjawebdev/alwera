@@ -20,7 +20,7 @@ $pagelink = get_sub_field('pagelink');
   <div class="cta-content">
     <div class="cta-description col-md-6">
       <?php if ($title): ?>
-        <h2><?php echo esc_html($title); ?></h2>
+        <h2 class="cta-image-h2"><?php echo esc_html($title); ?></h2>
       <?php endif; ?>
 
       <?php if ($subtitle): ?>

@@ -1,3 +1,7 @@
+.cta-image-h2 {
+  margin-bottom: 0;
+}
+
 .cta-image-wrapper {
   position: relative;
   display: flex;
@@ -27,7 +31,7 @@
   left: 0;
   width: 100%;
   color: white;
-  padding: 10px;
+  padding: 16px;
   z-index: 2;
 
   @include media-breakpoint-up(md) {
