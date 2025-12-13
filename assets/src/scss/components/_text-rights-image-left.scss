@@ -2,7 +2,7 @@
     margin-top: 8px;
     margin-bottom: 16px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-down(md) {
         margin-top: 8px;
         margin-bottom: 8px;
     }
@@ -11,7 +11,7 @@
 .btn {
     margin-top: 32px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-down(md) {
         margin-top: 24px;
     }
 }
