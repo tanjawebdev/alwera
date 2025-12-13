@@ -12,11 +12,11 @@
 }
 
 .statement {
-    margin-top: 20rem;
+    margin-top: 32rem;
     margin-bottom: 32rem;
 
     @include media-breakpoint-down(md) {
-        margin-top: 8rem;
+        margin-top: 16rem;
         margin-bottom: 16rem;
     }
 }
