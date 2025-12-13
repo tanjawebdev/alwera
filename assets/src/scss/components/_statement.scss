@@ -10,3 +10,13 @@
     display: flex;
     flex-direction: column-reverse;
 }
+
+.statement {
+    margin-top: 20rem;
+    margin-bottom: 32rem;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 8rem;
+        margin-bottom: 16rem;
+    }
+}
