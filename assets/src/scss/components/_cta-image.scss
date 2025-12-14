@@ -65,3 +65,9 @@
 .size-small {
   height: 300px;
 }
+
+.cta-image .btn {
+  @include media-breakpoint-down(md) {
+    margin-top: 24px;
+  }
+}

@@ -31,3 +31,9 @@
 .hero-gallery .splide__pagination {
     bottom: 2rem;
 }
+
+.hero-gallery .btn {
+    @include media-breakpoint-down(md) {
+        margin-top: 24px;
+    }
+}

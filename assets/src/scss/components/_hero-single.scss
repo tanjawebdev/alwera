@@ -48,3 +48,9 @@
 .hero-single .splide__pagination {
     bottom: 2rem;
 }
+
+.hero-single .btn {
+    @include media-breakpoint-down(md) {
+        margin-top: 24px;
+    }
+}
