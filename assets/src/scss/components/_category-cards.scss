@@ -24,8 +24,9 @@
 
 .card .card-icon {
     filter: invert(1);
-    width: 80px;
+    width: 60%;
     height: auto;
+    max-height: 80%;
     opacity: 0;
     transition: opacity 0.25s ease;
     z-index: 2;
