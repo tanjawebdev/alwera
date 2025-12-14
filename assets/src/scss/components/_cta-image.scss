@@ -56,6 +56,10 @@
 
 .size-large {
   height: 1000px;
+
+  @include media-breakpoint-down(md) {
+    height: 90vh;
+  }
 }
 
 .size-small {
