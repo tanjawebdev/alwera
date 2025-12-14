@@ -52,5 +52,6 @@
 .hero-single .btn {
     @include media-breakpoint-down(md) {
         margin-top: 24px;
+        margin-bottom: 8px;
     }
 }
