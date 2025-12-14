@@ -10,7 +10,9 @@ $image = get_sub_field('image');
 <div class="row align-items-center g-5">
   <div class="col-md-6">
     <?php if ($image): ?>
-      <?php echo wp_get_attachment_image($image['ID'], 'large', false, ['class' => 'img-fluid rounded']); ?>
+      <div class="aspect-ratio-box ratio-3-4">
+        <?php echo wp_get_attachment_image($image['ID'], 'large', false, ['class' => 'img-fluid rounded aspect-ratio-image']); ?>
+      </div>
     <?php endif; ?>
   </div>
 
