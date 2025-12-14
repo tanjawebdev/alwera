@@ -47,3 +47,14 @@
     /* Remove the 'img-fluid' class default width if it conflicts */
     max-width: 100%;
 }
+
+pre {
+    /* Reset default code-style properties you don't want */
+    white-space: normal;
+    /* Allows text to wrap normally */
+    font-size: 2rem;
+    font-family: inherit;
+    padding: 15px;
+    border-bottom: 1px solid #4f1e2733;
+    margin-bottom: 0;
+}
