@@ -8,6 +8,10 @@
   align-items: center;
   width: 100%;
   overflow: hidden;
+
+  @include media-breakpoint-down(md) {
+    border-radius: 0 !important;
+  }
 }
 
 .cta-image-wrapper::after {
@@ -69,5 +73,13 @@
 .cta-content .btn {
   @include media-breakpoint-down(md) {
     margin-top: 24px;
+    margin-bottom: 8px;
+  }
+}
+
+.container-full {
+  @include media-breakpoint-down(md) {
+    margin: 0;
+    width: 100%;
   }
 }

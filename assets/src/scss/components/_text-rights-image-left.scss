@@ -16,6 +16,12 @@
     }
 }
 
+.image-wrapper {
+    @include media-breakpoint-down(md) {
+        padding: 0;
+    }
+}
+
 .aspect-ratio-box {
     position: relative;
     /* Needed for positioning the absolute child */
