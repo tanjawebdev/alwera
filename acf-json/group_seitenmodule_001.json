@@ -330,6 +330,103 @@
                     "acfe_flexible_modal_edit_size": false,
                     "acfe_flexible_category": false
                 },
+                "layout_69383904fa227": {
+                    "key": "layout_69383904fa227",
+                    "name": "hero_gallery_blog",
+                    "label": "Hero – Galerie BLOG",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_69383923fa233",
+                            "label": "Blog Posts im Header",
+                            "name": "blog_posts",
+                            "aria-label": "",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "allow_archives": 0,
+                            "multiple": 1,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_69383905fa231",
+                            "label": "Intervall (Slide wechseln nach x Millisekunden)",
+                            "name": "interval",
+                            "aria-label": "",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 3000,
+                            "min": "",
+                            "max": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "step": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_69383905fa232",
+                            "label": "Container",
+                            "name": "container",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "container-small": "container-small",
+                                "container-lg": "container-lg",
+                                "container-fluid": "container-fluid"
+                            },
+                            "default_value": "container-fluid",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_modal_edit_size": false,
+                    "acfe_flexible_category": false
+                },
                 "layout_hero_single": {
                     "key": "layout_hero_single",
                     "name": "hero_single",
@@ -2978,5 +3075,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1765736997
+    "modified": 1765809894
 }
