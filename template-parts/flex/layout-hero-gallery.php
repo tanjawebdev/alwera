@@ -43,7 +43,7 @@ $interval = get_sub_field('interval') ?: 3000;
                 <?php endif; ?>
 
                 <?php if ($item['video']): ?>
-                  <video autoplay loop muted>
+                  <video autoplay loop muted playsinline>
                     <source src="<?php echo esc_url($item['video']['url']); ?>" type="<?php echo esc_attr($item['video']['mime_type']); ?>">
                     Your browser does not support the video tag.
                   </video>
