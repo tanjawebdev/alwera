@@ -23,7 +23,7 @@
 .btn-hero,
 .btn-secondary,
 .btn-overview {
-    align-self: flex-start;
+
     display: inline-flex;
     background: white;
     color: $primary;
@@ -82,6 +82,10 @@
 
     &:hover::before {
         left: 1rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        align-self: flex-start;
     }
 }
 
