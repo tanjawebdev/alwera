@@ -9,6 +9,7 @@
 
 // base
 @import "base/fonts",
+"base/buttons",
 "base/base",
 "base/pagination";
 
@@ -20,8 +21,7 @@
 "layout/grid";
 
 // components
-@import "components/buttons",
-"components/modal",
+@import "components/modal",
 "components/intro",
 "components/hero-single",
 "components/hero-gallery",

@@ -26,9 +26,10 @@
     background: white;
     color: $primary;
     position: relative;
-    width: 15rem;
+    min-width: 15rem;
     overflow: hidden;
     text-align: left;
+    padding-right: 3rem;
 
     span {
         left: 0;
