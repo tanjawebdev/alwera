@@ -29,7 +29,7 @@ $title_tag = in_array($title_tag, ['h1', 'h2', 'h3']) ? $title_tag : 'h2';
     <?php endif; ?>
 
     <?php if ($video): ?>
-      <video autoplay loop muted>
+      <video autoplay loop muted playsinline>
         <source src="<?php echo esc_url($video['url']); ?>" type="<?php echo esc_attr($video['mime_type']); ?>">
         Your browser does not support the video tag.
       </video>
