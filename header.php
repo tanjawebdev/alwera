@@ -21,7 +21,7 @@
           </a>
       <?php else : ?>
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/static/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
           </a>
       <?php
       endif;
