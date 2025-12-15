@@ -70,3 +70,15 @@ pre:first-of-type {
     /* Apply the same border style as the bottom border */
     border-top: 1px solid #4f1e2733;
 }
+
+.text_links_image_right .content {
+    @include media-breakpoint-down(md) {
+        margin-top: 32px;
+    }
+}
+
+.text_links_image_right .content p {
+    @include media-breakpoint-down(md) {
+        margin-bottom: 0;
+    }
+}

@@ -16,7 +16,7 @@ $image = get_sub_field('image');
     <?php endif; ?>
   </div>
 
-  <div class="col-md-6">
+  <div class="col-md-6 content">
     <?php if ($subtitle): ?>
       <p class="subtitle"><?php echo esc_html($subtitle); ?></p>
     <?php endif; ?>

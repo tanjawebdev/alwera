@@ -8,7 +8,7 @@ $image = get_sub_field('image');
 ?>
 
 <div class="row align-items-center g-5">
-  <div class="col-md-6 order-2 order-md-1">
+  <div class="col-md-6 order-2 order-md-1 content">
     <?php if ($subtitle): ?>
       <p class="subtitle"><?php echo esc_html($subtitle); ?></p>
     <?php endif; ?>
