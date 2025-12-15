@@ -23,18 +23,24 @@
 .btn-hero,
 .btn-secondary,
 .btn-overview {
+    align-self: flex-start;
+    display: inline-flex;
     background: white;
     color: $primary;
     position: relative;
     min-width: 15rem;
+    width: auto;
+    white-space: nowrap;
     overflow: hidden;
     text-align: left;
     padding-right: 3rem;
+    align-items: center;
 
     span {
         left: 0;
         transition: 0.3s ease;
         position: relative;
+        display: inline-block;
     }
 
     &:hover {

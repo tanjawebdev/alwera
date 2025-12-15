@@ -17,7 +17,7 @@
     margin-bottom: 4rem;
     flex-direction: column;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
         align-items: flex-end;
         flex-direction: row;
         margin-bottom: 2rem;
