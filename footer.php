@@ -40,11 +40,11 @@
           <ul id="menu-footer" class="d-none d-md-flex">
             <?php foreach ($menu_tree as $parent_id => $branch): ?>
               <li>
-                <a href="<?php echo esc_url($branch['item']->url); ?>"><?php echo esc_html($branch['item']->title); ?></a>
+                <a href="<?php echo esc_url($branch['item']->url); ?>" class="<?php echo esc_attr(implode(' ', (array)$branch['item']->classes)); ?>"><?php echo esc_html($branch['item']->title); ?></a>
                 <?php if (!empty($branch['children'])): ?>
                   <ul class="sub-menu">
                     <?php foreach ($branch['children'] as $child): ?>
-                      <li><a href="<?php echo esc_url($child->url); ?>"><?php echo esc_html($child->title); ?></a></li>
+                      <li><a href="<?php echo esc_url($child->url); ?>" class="<?php echo esc_attr(implode(' ', (array)$child->classes)); ?>"><?php echo esc_html($child->title); ?></a></li>
                     <?php endforeach; ?>
                   </ul>
                 <?php endif; ?>
@@ -64,7 +64,7 @@
                     <?php if (!empty($branch['children'])): ?>
                       <ul>
                         <?php foreach ($branch['children'] as $child): ?>
-                          <li><a href="<?php echo esc_url($child->url); ?>"><?php echo esc_html($child->title); ?></a></li>
+                          <li><a href="<?php echo esc_url($child->url); ?>" class="<?php echo esc_attr(implode(' ', (array)$child->classes)); ?>"><?php echo esc_html($child->title); ?></a></li>
                         <?php endforeach; ?>
                       </ul>
                     <?php endif; ?>
