@@ -33,7 +33,7 @@ function projecttheme_register_employees() {
         'show_in_menu'       => true,                      // Show in admin menu
         'menu_position'      => 20,                        // Position in admin sidebar
         'menu_icon'          => 'dashicons-groups',        // Icon (people/groups)
-        'supports'           => array('title', 'thumbnail'), // Title = Name, Thumbnail = Photo
+        'supports'           => array('title', 'thumbnail', 'page-attributes'), // Title = Name, Thumbnail = Photo
         'has_archive'        => false,                     // No archive page needed
         'show_in_rest'       => true,                      // Enable Gutenberg + REST API
         'capability_type'    => 'post',

@@ -2556,6 +2556,37 @@
                             "save_options": 0,
                             "allow_custom": 0,
                             "search_placeholder": ""
+                        },
+                        {
+                            "key": "field_69640e4956680",
+                            "label": "Abstand Unten",
+                            "name": "space_after",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "space-after_small": "klein",
+                                "space-after_big": "groß"
+                            },
+                            "default_value": "small",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
                         }
                     ],
                     "min": "",
@@ -2865,5 +2896,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1765884713
+    "modified": 1768165225
 }

@@ -9,8 +9,10 @@ $title = get_sub_field('title');
   $args = array(
     'post_type' => 'employee',
     'posts_per_page' => -1,
-    'orderby' => 'title',
-    'order' => 'ASC',
+    'orderby'        => array(
+      'menu_order' => 'ASC',
+      'title'      => 'ASC', // Fallback bei gleicher Reihenfolge
+    ),
     'tax_query' => array(
       array(
         'taxonomy' => 'department',

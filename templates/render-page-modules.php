@@ -17,6 +17,7 @@ while (have_rows('page_modules')) : the_row();
     'bg'         => get_sub_field('background') ?: 'none',
     'id'         => get_sub_field('id-anchor') ?: '',
     'show_on'    => get_sub_field('show-on') ?: 'everywhere',
+    'space_after' => get_sub_field('space_after') ?: '',
   ];
 
   // Öffne Section-Hülle nur, wenn Helper existieren – sonst simple Wrapper
@@ -26,7 +27,8 @@ while (have_rows('page_modules')) : the_row();
     $name = $opts['name'];
     $id   = $opts['id'] ? ' id="'.esc_attr($opts['id']).'"' : '';
     $cont = $opts['container'];
-    echo '<section'.$id.' class="'.$name.'">';
+    $space_after = $opts['space_after'];
+    echo '<section'.$id.' class="'.$name.' '.$space_after.'">';
     if ($cont !== 'none') echo '<div class="'.$cont.'">';
   }
 

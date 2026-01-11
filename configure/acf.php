@@ -9,14 +9,15 @@ function section_open(array $opts = []) {
     $bg        = $opts['bg'] ?? 'none';
     $container = $opts['container'] ?? 'container-lg';
     $show      = $opts['show_on'] ?? 'everywhere'; // everywhere | only-mobile | only-desktop
+    $space_after = $opts['space_after'] ?? '';
 
     // Sichtbarkeits-Klassen mappen (Bootstrap)
     $visClass = '';
-    if ($show === 'only-mobile')  $visClass = 'd-lg-none';
+    if ($show === 'only-mobile')  $visClass = 'd-lg-none';  
     if ($show === 'only-desktop') $visClass = 'd-none d-lg-block';
 
     $classesSection = trim("section section--bg-{$bg} {$visClass}");
-    echo '<section'.($id ? ' id="'.esc_attr($id).'"' : '').' class="'.$name.' '.esc_attr($classesSection).'">';
+    echo '<section'.($id ? ' id="'.esc_attr($id).'"' : '').' class="'.$name.' '.esc_attr($classesSection).' '.$space_after.'">';
     
     if ($container !== 'none') {
         echo '<div class="'.esc_attr($container).'">';
