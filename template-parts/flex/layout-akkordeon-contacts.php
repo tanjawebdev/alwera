@@ -2,7 +2,7 @@
 // 1. Get ALL Department Terms (Taxonomy: 'department')
 $departments = get_terms(array(
   'taxonomy' => 'department',
-  'hide_empty' => true,
+  'hide_empty' => false,
   'meta_key' => 'department_order',  // or 'reihenfolge' depending on field name
   'orderby' => 'meta_value_num',
   'order' => 'ASC'
