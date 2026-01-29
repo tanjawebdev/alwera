@@ -1,9 +1,10 @@
 <?php
 // 1. Get ALL Department Terms (Taxonomy: 'department')
 $departments = get_terms(array(
-  'taxonomy' => 'department', // Confirmed Taxonomy Slug
-  'hide_empty' => true,         // Only show departments that have employees assigned
-  'orderby' => 'name',
+  'taxonomy' => 'department',
+  'hide_empty' => true,
+  'meta_key' => 'department_order',  // or 'reihenfolge' depending on field name
+  'orderby' => 'meta_value_num',
   'order' => 'ASC'
 ));
 ?>
