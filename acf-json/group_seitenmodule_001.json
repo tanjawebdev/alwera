@@ -25,7 +25,9 @@
             "acfe_flexible_layouts_thumbnails": 0,
             "acfe_flexible_layouts_settings": 0,
             "acfe_flexible_async": [],
-            "acfe_flexible_add_actions": [],
+            "acfe_flexible_add_actions": [
+                "toggle"
+            ],
             "acfe_flexible_remove_button": [],
             "acfe_flexible_layouts_state": "user",
             "acfe_flexible_modal_edit": {
@@ -2896,5 +2898,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1768165225
+    "modified": 1770975369
 }
