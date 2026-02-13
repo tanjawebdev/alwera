@@ -19,21 +19,21 @@ $location = get_sub_field('location');
         <?php endif; ?>
         <div class="map-text-info">
           <?php if ($telephone): ?>
-            <p>Telefon<br>
+            <span>Telefon<br>
               <a href="tel:<?php echo esc_attr($telephone); ?>"><?php echo esc_html($telephone); ?></a>
-            </p>
+            </span>
           <?php endif; ?>
 
           <?php if ($fax): ?>
-            <p>Fax<br>
+            <span>Fax<br>
               <?php echo esc_html($fax); ?>
-            </p>
+            </span>
           <?php endif; ?>
 
           <?php if ($email): ?>
-            <p>E-Mail<br>
+            <span>E-Mail<br>
               <a href="mailto:<?php echo esc_attr($email); ?>"><?php echo esc_html($email); ?></a>
-            </p>
+            </span>
           <?php endif; ?>
         </div>
       </div>

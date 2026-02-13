@@ -54,27 +54,27 @@ $title = get_sub_field('title');
 
             <div class="contact-card-info">
               <?php if (get_field('telephone')): ?>
-                <p>
+                <span>
                   <a href="tel:<?php echo esc_attr(get_field('telephone')); ?>">
                     <strong>Tel:</strong> <?php the_field('telephone'); ?>
                   </a>
-                </p>
+                </span>
               <?php endif; ?>
 
               <?php if (get_field('mobile')): ?>
-                <p>
+                <span>
                   <a href="tel:<?php echo esc_attr(get_field('mobile')); ?>">
                     <strong>Mobil:</strong> <?php the_field('mobile'); ?>
                   </a>
-                </p>
+                </span>
               <?php endif; ?>
 
               <?php if (get_field('mail')): ?>
-                <p>
+                <span>
                   <a href="mailto:<?php echo esc_attr(get_field('mail')); ?>">
                     <strong>E-Mail:</strong> <?php the_field('mail'); ?>
                   </a>
-                </p>
+                </span>
               <?php endif; ?>
             </div>
 
