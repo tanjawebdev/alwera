@@ -78,21 +78,21 @@ $departments = get_terms(array(
                     <?php endif; ?>
 
                     <?php if (get_field('telephone')): ?>
-                      <p class="contact-element"><strong>Tel:</strong> <a
+                      <span class="contact-element"><strong>Tel:</strong> <a
                           href="tel:<?php echo esc_attr(get_field('telephone')); ?>"><?php the_field('telephone'); ?></a>
-                      </p>
+                      </span>
                     <?php endif; ?>
 
                     <?php if (get_field('mobile')): ?>
-                      <p class="contact-element"><strong>Mobil:</strong> <a
+                      <span class="contact-element"><strong>Mobil:</strong> <a
                           href="tel:<?php echo esc_attr(get_field('mobile')); ?>"><?php the_field('mobile'); ?></a>
-                      </p>
+                      </span>
                     <?php endif; ?>
 
                     <?php if (get_field('mail')): ?>
-                      <p class="contact-element"><strong>E-Mail:</strong> <a
+                      <span class="contact-element"><strong>E-Mail:</strong> <a
                           href="mailto:<?php echo esc_attr(get_field('mail')); ?>"><?php the_field('mail'); ?></a>
-                      </p>
+                      </span>
                     <?php endif; ?>
                   </div>
                 </div>
