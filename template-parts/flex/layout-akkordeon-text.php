@@ -20,7 +20,7 @@ $items = get_sub_field('items');
           <div id="collapse<?php echo $index; ?>" class="accordion-collapse collapse" data-bs-parent="#accordionText">
             <div class="accordion-body">
               <?php if ($item['text']): ?>
-                <p><?php echo esc_html($item['text']); ?></p>
+                <?php echo wp_kses_post($item['text']); ?>
               <?php endif; ?>
             </div>
           </div>

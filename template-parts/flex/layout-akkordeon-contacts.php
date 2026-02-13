@@ -64,10 +64,13 @@ $departments = get_terms(array(
                     <?php $departments = get_the_terms(get_the_ID(), 'department'); ?>
 
                     <?php if ($departments && !is_wp_error($departments)): ?>
-                      <?php $department = reset($departments); ?>
-                      <p class="job-title">
-                        <?php echo esc_html($department->name); ?>
-                      </p>
+                      <div class="contact-card-departments">
+                        <?php foreach ($departments as $department): ?>
+                          <p class="job-title">
+                            <?php echo esc_html($department->name); ?>
+                          </p>
+                        <?php endforeach; ?>
+                      </div>
                     <?php endif; ?>
 
                     <?php if (get_the_title()): ?>
