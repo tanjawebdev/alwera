@@ -20,8 +20,7 @@ a:active {
     outline: 0;
 }
 
-a:focus-visible,
-a:focus {
+a:focus-visible {
     outline: 2px solid $primary;
     outline-offset: 2px;
 }
