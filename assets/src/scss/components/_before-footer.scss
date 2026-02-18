@@ -1,0 +1,39 @@
+.before-footer-inner {
+    flex-direction: column;
+    display: flex;
+    padding: 1.5rem;
+
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+        padding: 3rem 2rem 2rem;
+    }
+}
+
+.before-footer {
+    background-color: #ffffff;
+    border-top: 1px solid $primary;
+    padding: 1rem 0;
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.before-footer__left span {
+    @include media-breakpoint-up(lg) {
+        max-width: 400px;
+        display: block;
+        margin-left: 2rem;
+    }
+}
+
+.before-footer__right {
+    margin-top: 2rem;
+
+    @include media-breakpoint-up(lg) {
+        margin-left: -4rem;
+        margin-top: 0;
+    }
+}

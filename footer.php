@@ -1,6 +1,11 @@
 
   </div><!-- #content -->
 
+
+  <?php
+  get_template_part('template-parts/flex/before-footer');
+  ?>
+  
   <footer id="colophon" class="site-footer">
     <div class="footer-content container-fluid">
       <div class="footer-left col-12 col-md-4 col-lg-6">
