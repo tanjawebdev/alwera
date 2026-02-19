@@ -30,6 +30,14 @@ p>a {
     color: $primary;
 }
 
+div.rte ul {
+    margin-bottom: 2rem;
+}
+
+div.rte ul li {
+    margin-bottom: 1rem;
+}
+
 .transition,
 %transition {
     transition: all 0.3s ease-in-out;
