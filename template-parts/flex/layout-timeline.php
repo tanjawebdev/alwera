@@ -7,7 +7,7 @@ $image = get_sub_field('image');
   <div class="timeline-image col-12 col-md-6">
     <div class="timeline-image-wrapper">
       <picture>
-        <?php echo wp_get_attachment_image($image['ID'], 'medium', false, ['class' => 'img-fluid rounded']); ?>
+        <?php echo wp_get_attachment_image($image['ID'], 'medium_size', false, ['class' => 'img-fluid rounded']); ?>
       </picture>
     </div>
   </div>

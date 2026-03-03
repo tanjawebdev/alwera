@@ -11,7 +11,7 @@ $image = get_sub_field('image');
   <div class="col-md-6 image-wrapper">
     <?php if ($image): ?>
       <div class="aspect-ratio-box ratio-3-4">
-        <?php echo wp_get_attachment_image($image['ID'], 'large', false, ['class' => 'img-fluid rounded aspect-ratio-image']); ?>
+        <?php echo wp_get_attachment_image($image['ID'], 'large_size', false, ['class' => 'img-fluid rounded aspect-ratio-image']); ?>
       </div>
     <?php endif; ?>
   </div>

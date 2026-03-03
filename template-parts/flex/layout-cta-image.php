@@ -13,7 +13,7 @@ $pagelink = get_sub_field('pagelink');
 <div class="cta-image-wrapper size-<?php echo esc_attr($size); ?> rounded">
   <?php if ($image): ?>
     <div class="cta-image">
-      <?php echo wp_get_attachment_image($image['ID'], 'large', false, ['class' => 'img-fluid']); ?>
+      <?php echo wp_get_attachment_image($image['ID'], 'large_size', false, ['class' => 'img-fluid']); ?>
     </div>
   <?php endif; ?>
 

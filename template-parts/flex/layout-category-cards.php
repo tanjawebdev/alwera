@@ -24,7 +24,7 @@ $cards = get_sub_field('card');
           <?php if (!empty($card['image'])): ?>
             <?php echo wp_get_attachment_image(
               $card['image']['ID'],
-              'medium',
+              'small_size',
               false,
               ['class' => 'card-img-top']
             ); ?>

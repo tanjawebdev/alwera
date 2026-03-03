@@ -34,7 +34,7 @@ $categories = get_sub_field('categories');
             <?php foreach ($category['images'] as $img): ?>
               <div class="info-box-image col-6 col-sm-4">
                 <picture>
-                  <?php echo wp_get_attachment_image($img['ID'], 'medium', false, ['class' => 'img-fluid rounded']); ?>
+                  <?php echo wp_get_attachment_image($img['ID'], 'small_size', false, ['class' => 'img-fluid rounded']); ?>
                 </picture>
               </div>
             <?php endforeach; ?>
