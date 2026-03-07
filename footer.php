@@ -62,7 +62,7 @@
             <?php $index = 0; foreach ($menu_tree as $parent_id => $branch): ?>
               <div class="accordion-item">
                 <button class="accordion-button <?php echo $index > 0 ? 'collapsed' : ''; ?>" type="button" data-bs-toggle="collapse" data-bs-target="#footerCollapse<?php echo $index; ?>" aria-expanded="<?php echo $index === 0 ? 'true' : 'false'; ?>">
-                  <h3><?php echo esc_html($branch['item']->title); ?></h3>
+                  <span class="h3"><?php echo esc_html($branch['item']->title); ?></span>
                 </button>
                 <div id="footerCollapse<?php echo $index; ?>" class="accordion-collapse collapse <?php echo $index === 0 ? 'show' : ''; ?>" data-bs-parent="#footerAccordion">
                   <div class="accordion-body">

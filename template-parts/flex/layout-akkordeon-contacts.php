@@ -41,7 +41,7 @@ $departments = get_terms(array(
         <div class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseDept<?php echo $dept_index; ?>" aria-expanded="false">
-            <h3><?php echo $department_name; ?></h3>
+            <span class="h3"><?php echo $department_name; ?></span>
           </button>
         </div>
         <div id="collapseDept<?php echo $dept_index; ?>" class="accordion-collapse collapse"
