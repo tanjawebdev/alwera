@@ -23,7 +23,6 @@
 .btn-hero,
 .btn-secondary,
 .btn-overview {
-
     display: inline-flex;
     background: white;
     color: $primary;
@@ -82,6 +81,14 @@
 
     &:hover::before {
         left: 1rem;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $primary;
+        outline-offset: 2px;
+        background-color: white;
+        box-shadow: none;
+        color: $primary;
     }
 
     @include media-breakpoint-down(md) {
