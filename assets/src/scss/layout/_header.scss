@@ -79,7 +79,7 @@ header .navigation {
         border-color: $secondary !important;
     }
 
-    &:focus-visible {
+    a:focus-visible {
         outline: 2px solid $primary;
         outline-offset: 2px;
         background-color: white;
