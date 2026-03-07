@@ -1,23 +1,23 @@
 .accordionText-wrapper {
-    display: flex;
+  display: flex;
 }
 
 .accordionText-wrapper h2 {
-    flex: 2;
+  flex: 2;
 }
 
 .accordionText-wrapper .accordion {
-    flex: 3;
+  flex: 3;
 }
 
 .accordionText-wrapper .accordion-body {
-    padding-left: 4rem;
+  padding-left: 4rem;
 }
 
 .accordion-body p {
-    word-break: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 /* --------------------------------------------------------
@@ -151,7 +151,7 @@
   border-bottom: 0.5px solid #4f1e2733;
 }
 
-.accordion-item h3 {
+.accordion-item .h3 {
   margin: 0px;
   margin-left: 10px;
 }
