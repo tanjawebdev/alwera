@@ -38,7 +38,7 @@
       </nav><!-- #site-navigation -->
     </div>
 
-    <button class="menu-toggle col-6" aria-expanded="false" aria-controls="mobile-menu">
+    <button class="menu-toggle col-6" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
       <span></span>
       <span></span>
       <span></span>
