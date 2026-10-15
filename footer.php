@@ -80,7 +80,10 @@
           </div>
         </div>
         <div class="footer-legal col-lg-12">
-          <?php wp_nav_menu( array( 'theme_location' => 'menu-legal', 'menu_id' => 'menu-legal' ) ); ?>
+          <div class="footer-center-menu">
+            <a onclick="window.Cookiebot.show()" href="#">Cookie-Einstellungen</a>
+            <?php wp_nav_menu( array( 'theme_location' => 'menu-legal', 'menu_id' => 'menu-legal' ) ); ?>
+          </div>
           <div class="footer-text">
             <p> &copy; Alwera AG 2025</p>
           </div>
