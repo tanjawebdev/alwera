@@ -44,8 +44,7 @@ $departments = get_terms(array(
             <span class="h3"><?php echo $department_name; ?></span>
           </button>
         </div>
-        <div id="collapseDept<?php echo $dept_index; ?>" class="accordion-collapse collapse"
-          data-bs-parent="#accordionContacts">
+        <div id="collapseDept<?php echo $dept_index; ?>" class="accordion-collapse collapse">
           <div class="accordion-body">
 
             <?php if ($employees->have_posts()): ?>
@@ -61,13 +60,13 @@ $departments = get_terms(array(
                     </div>
                   <?php endif; ?>
                   <div class="accordion-contact-card-body">
-                    <?php $departments = get_the_terms(get_the_ID(), 'department'); ?>
+                    <?php $employee_departments = get_the_terms(get_the_ID(), 'department'); ?>
 
-                    <?php if ($departments && !is_wp_error($departments)): ?>
+                    <?php if ($employee_departments && !is_wp_error($employee_departments)): ?>
                       <div class="contact-card-departments">
-                        <?php foreach ($departments as $department): ?>
+                        <?php foreach ($employee_departments as $employee_department): ?>
                           <p class="job-title">
-                            <?php echo esc_html($department->name); ?>
+                            <?php echo esc_html($employee_department->name); ?>
                           </p>
                         <?php endforeach; ?>
                       </div>
